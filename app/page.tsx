@@ -23,22 +23,22 @@ export default function Home() {
       <main className="flex flex-1 flex-col items-center justify-center px-6 py-16">
         {/* Hero */}
         <div className="flex flex-col items-center text-center">
-          <Logo size={300} />
+          <Logo size={220} />
 
-          <p className="mt-6 text-xs uppercase tracking-[0.42em] text-cream/60">
+          <p className="mt-4 text-xs uppercase tracking-[0.42em] text-cream/60">
             {brand.tagline}
           </p>
 
-          <p className="mt-5 max-w-xl text-balance text-lg leading-relaxed text-cream/75">
+          <p className="mt-4 max-w-xl text-balance text-lg leading-relaxed text-cream/75">
             {brand.blurb}
           </p>
-          <p className="mt-4 text-xs uppercase tracking-[0.3em] text-taupe">
+          <p className="mt-3 text-xs uppercase tracking-[0.3em] text-taupe">
             {brand.location}
           </p>
         </div>
 
         {/* The two choices */}
-        <div className="mt-14 grid w-full max-w-3xl gap-5 sm:grid-cols-2">
+        <div className="mt-8 grid w-full max-w-3xl gap-5 sm:grid-cols-2">
           {choices.map((c) => (
             <Link
               key={c.href}
