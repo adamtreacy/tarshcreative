@@ -7,7 +7,7 @@
 export const brand = {
   name: "Tarsh Creative",
   tagline: "Wedding & Business Content",
-  location: "Darwin based · Servicing Australia wide",
+  location: "Darwin Based · Servicing Australia Wide",
   blurb:
     "Scroll stopping social media content for weddings and brands, captured on professional equipment and edited to feel like you.",
   instagram: "https://instagram.com/tarshcreative",
