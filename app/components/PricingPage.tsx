@@ -47,9 +47,6 @@ export default function PricingPage({
           <p className="text-xs uppercase tracking-[0.32em] text-taupe">
             {eyebrow}
           </p>
-          <h1 className="mt-3 font-display text-5xl font-light text-cream">
-            {title}
-          </h1>
           <p className="mt-5 text-balance text-lg leading-relaxed text-cream/75">
             {intro}
           </p>
