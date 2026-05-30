@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+@theme {
+  /* Brand palette — pulled from the Tarsh Creative logo & feed */
+  --color-brand: #3c4f59; /* the logo circle — dusty slate blue */
+  --color-brand-deep: #2c3a42;
+  --color-brand-soft: #5e7079;
+  --color-cream: #f5efe5; /* warm off-white background */
+  --color-sand: #e7ddcd; /* soft sand accent */
+  --color-taupe: #b7a892; /* warm muted gold/taupe accent */
+  --color-ink: #29333a;
+}
+
+@theme inline {
+  --font-display: var(--font-cormorant);
+  --font-body: var(--font-jost);
+}
+
+:root {
+  --background: #f5efe5;
+  --foreground: #29333a;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-jost), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Wide-tracked wordmark used in the logo badge */
+.tracking-wordmark {
+  letter-spacing: 0.38em;
+}
