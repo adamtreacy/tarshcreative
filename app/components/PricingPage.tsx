@@ -7,6 +7,7 @@ type PricingPageProps = {
   title: string;
   intro: string;
   packages: Package[];
+  notes?: string[];
 };
 
 export default function PricingPage({
@@ -14,6 +15,7 @@ export default function PricingPage({
   title,
   intro,
   packages,
+  notes,
 }: PricingPageProps) {
   const enquirySubject = encodeURIComponent(`${title} enquiry`);
 
@@ -59,7 +61,7 @@ export default function PricingPage({
         </header>
 
         {/* Packages */}
-        <section className="mx-auto mt-14 grid w-full max-w-5xl gap-6 md:grid-cols-3">
+        <section className={`mx-auto mt-14 grid w-full gap-6 ${packages.length === 4 ? "max-w-6xl sm:grid-cols-2 xl:grid-cols-4" : "max-w-5xl md:grid-cols-3"}`}>
           {packages.map((pkg) => (
             <div
               key={pkg.name}
@@ -148,6 +150,15 @@ export default function PricingPage({
             </div>
           ))}
         </section>
+
+        {/* Additional notes */}
+        {notes && notes.length > 0 && (
+          <div className="mx-auto mt-8 max-w-6xl text-center">
+            <p className="text-xs uppercase tracking-[0.25em] text-taupe/80">
+              {notes.join(" · ")}
+            </p>
+          </div>
+        )}
 
         {/* Closing CTA */}
         <section className="mx-auto mt-16 max-w-2xl text-center">

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import PricingPage from "@/app/components/PricingPage";
-import { weddingIntro, weddingPackages } from "@/app/lib/content";
+import { weddingIntro, weddingPackages, weddingNotes } from "@/app/lib/content";
 
 export const metadata: Metadata = {
   title: "Wedding Content & Prices",
@@ -11,10 +11,11 @@ export const metadata: Metadata = {
 export default function WeddingPage() {
   return (
     <PricingPage
-      eyebrow="For couples"
+      eyebrow="Wedding Content Creation"
       title="Wedding Content"
       intro={weddingIntro}
       packages={weddingPackages}
+      notes={weddingNotes}
     />
   );
 }

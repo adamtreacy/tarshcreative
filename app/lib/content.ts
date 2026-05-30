@@ -12,7 +12,7 @@ export const brand = {
     "Scroll-stopping social media content for weddings and brands, captured on professional equipment — and edited to feel like you.",
   instagram: "https://instagram.com/tarshcreative",
   instagramHandle: "@tarshcreative",
-  email: "hello@tarshcreative.com", // TODO: confirm real enquiry email
+  email: "tarshcreative@ga-productions.com",
 };
 
 export type Package = {
@@ -25,45 +25,67 @@ export type Package = {
 };
 
 export const weddingIntro =
-  "Your day, captured for the way you actually relive it — vertical, cinematic, ready to share. Same-day teasers, full highlight reels and all the in-between moments your photographer can't be everywhere for.";
+  "For modern couples wanting to relive the feeling; not just the timeline.";
+
+export const weddingNotes = [
+  "Additional coverage available at $120/hr",
+  "Recording of vows and speeches at extra cost",
+  "Travel fees may apply",
+];
 
 export const weddingPackages: Package[] = [
   {
-    name: "The Elopement",
-    price: "$POA",
-    description: "Intimate ceremonies & small celebrations.",
+    name: "The Basics",
+    price: "$970",
+    cadence: "+ GST",
+    description: "4 hours coverage",
     features: [
-      "Up to 3 hours of coverage",
-      "1 × 60–90s social highlight reel",
-      "3–5 vertical short-form clips",
-      "Delivered within 2 weeks",
+      "Pre wedding consultation",
+      "Up to 4 hrs coverage",
+      "1x 30–60 second ceremony edit",
     ],
   },
   {
-    name: "The Celebration",
-    price: "$POA",
-    description: "Our most-loved full-day wedding package.",
+    name: "The Essentials",
+    price: "$1,350",
+    cadence: "+ GST",
+    description: "5 hours coverage",
     features: [
-      "Up to 8 hours of coverage",
-      "Same-day / next-day teaser reel",
-      "1 × 2–3 min highlight film",
-      "8–10 vertical short-form clips",
-      "Getting-ready to first-dance",
-      "Delivered within 3 weeks",
+      "Pre wedding consultation",
+      "Up to 5 hrs capturing",
+      "1x 15–30 second highlight edit (within 24 hrs)",
+      "1x 30–60 second ceremony edit",
+    ],
+  },
+  {
+    name: "The Ultimate",
+    price: "$1,940",
+    cadence: "+ GST",
+    description: "7 hours coverage",
+    features: [
+      "Pre wedding consultation",
+      "Up to 7 hrs capturing",
+      "1x 15–30 second highlight edit (within 24 hrs)",
+      "1x 30–60 second pre-wedding bridal party edit",
+      "1x 30–60 second ceremony edit",
     ],
     featured: true,
   },
   {
     name: "The Full Story",
-    price: "$POA",
-    description: "Multi-day & destination celebrations.",
+    price: "$3,400",
+    cadence: "+ GST",
+    description: "9 hours coverage",
     features: [
-      "Up to 10 hours + extras",
-      "Same-day teaser reel",
-      "Extended highlight film",
-      "12+ vertical short-form clips",
-      "Welcome event / recovery coverage",
-      "Priority delivery",
+      "Pre wedding consultation",
+      "Up to 9 hrs capturing",
+      "1x 15–30 second highlight edit (within 24 hrs)",
+      "1x 30–60 second pre-wedding bridal party edit",
+      "1x 30–60 second ceremony edit",
+      "1x 30–60 second reception edit",
+      "1x 30–60 second 'Bride's Choice' edit",
+      "Private link to all content",
+      "All content delivered within 7 days",
     ],
   },
 ];
@@ -71,42 +93,46 @@ export const weddingPackages: Package[] = [
 export const businessIntro =
   "Consistent, on-brand content that does the heavy lifting on socials — without you having to be behind (or in front of) the camera. Built for businesses that want to show up online and actually look the part.";
 
+export const businessNotes = [
+  "Need something different? Custom packages and add-ons available",
+];
+
 export const businessPackages: Package[] = [
   {
-    name: "The Taster",
-    price: "$POA",
-    description: "A one-off shoot to refresh your feed.",
+    name: "Package One",
+    price: "$870",
+    cadence: "+ GST",
+    description: "Perfect for new or small businesses starting out.",
     features: [
-      "Half-day content shoot",
-      "10–15 short-form vertical videos",
-      "A bank of branded photos",
-      "Professionally edited & captioned",
+      "30 minute planning call",
+      "1 hr on location shoot",
+      "Full content library delivered for ongoing use",
     ],
   },
   {
-    name: "Monthly Content",
-    price: "$POA",
-    cadence: "per month",
-    description: "Show up consistently, every single month.",
+    name: "Package Two",
+    price: "$1,200",
+    cadence: "+ GST",
+    description: "For growing businesses needing consistent content.",
     features: [
-      "Monthly content shoot",
-      "12–16 reels / month",
-      "Trend & caption suggestions",
-      "Posting-ready, on-brand edits",
-      "Priority booking",
+      "30 minute planning call",
+      "2 hour on location shoot",
+      "2x edited videos (20–35 sec)",
+      "Full content library delivered for ongoing use",
     ],
     featured: true,
   },
   {
-    name: "Brand Day",
-    price: "$POA",
-    description: "A full day to stockpile content.",
+    name: "Package Three",
+    price: "$1,530",
+    cadence: "+ GST",
+    description: "Perfect for established brands wanting to level up.",
     features: [
-      "Full-day content shoot",
-      "25+ short-form videos",
-      "Photo & video library",
-      "Multiple locations / looks",
-      "Content plan to roll it out",
+      "30 minute planning call",
+      "3 hr on location shoot",
+      "2x edited videos (10–35 sec)",
+      "25 high res images",
+      "Full content library delivered for ongoing use",
     ],
   },
 ];

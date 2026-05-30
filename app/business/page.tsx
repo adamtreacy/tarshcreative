@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import PricingPage from "@/app/components/PricingPage";
-import { businessIntro, businessPackages } from "@/app/lib/content";
+import { businessIntro, businessPackages, businessNotes } from "@/app/lib/content";
 
 export const metadata: Metadata = {
   title: "Business Content & Prices",
@@ -15,6 +15,7 @@ export default function BusinessPage() {
       title="Business Content"
       intro={businessIntro}
       packages={businessPackages}
+      notes={businessNotes}
     />
   );
 }
