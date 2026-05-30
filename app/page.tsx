@@ -23,7 +23,7 @@ export default function Home() {
       <main className="flex flex-1 flex-col items-center justify-center px-6 py-16">
         {/* Hero */}
         <div className="flex flex-col items-center text-center">
-          <Logo size={220} />
+          <Logo size={520} className="w-[200px] sm:w-[280px] lg:w-[520px]" />
 
           <p className="mt-4 text-xs uppercase tracking-[0.42em] text-cream/60">
             {brand.tagline}
