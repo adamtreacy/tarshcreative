@@ -142,7 +142,7 @@ export default function PricingPage({
                     : "bg-brand text-cream hover:bg-brand-deep"
                 }`}
               >
-                Enquire
+                Book Now
               </a>
             </div>
           ))}
