@@ -9,6 +9,8 @@
   --color-sand: #e7ddcd; /* soft sand accent */
   --color-taupe: #b7a892; /* warm muted gold/taupe accent */
   --color-ink: #29333a;
+  --color-navy: #0f1e28;
+  --color-chartreuse: #c6d43e;
 }
 
 @theme inline {
