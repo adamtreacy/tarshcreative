@@ -5,7 +5,7 @@ import { weddingIntro, weddingPackages, weddingNotes } from "@/app/lib/content";
 export const metadata: Metadata = {
   title: "Wedding Content & Prices",
   description:
-    "Wedding social media content packages — teasers, highlight reels and vertical short-form clips of your day. Darwin based, servicing Australia wide.",
+    "Wedding social media content packages. Teasers, highlight reels and vertical short form clips of your day. Darwin based, servicing Australia wide.",
 };
 
 export default function WeddingPage() {

@@ -9,7 +9,7 @@ export const brand = {
   tagline: "Wedding & Business Content",
   location: "Darwin based · Servicing Australia wide",
   blurb:
-    "Scroll-stopping social media content for weddings and brands, captured on professional equipment — and edited to feel like you.",
+    "Scroll stopping social media content for weddings and brands, captured on professional equipment and edited to feel like you.",
   instagram: "https://instagram.com/tarshcreative",
   instagramHandle: "@tarshcreative",
   email: "tarshcreative@ga-productions.com",
@@ -26,7 +26,7 @@ export type Package = {
 };
 
 export const weddingIntro =
-  "For modern couples wanting to relive the feeling; not just the timeline.";
+  "For modern couples wanting to relive the feeling. Not just the timeline.";
 
 export const weddingNotes = [
   "Additional coverage available at $120/hr",
@@ -43,7 +43,7 @@ export const weddingPackages: Package[] = [
     features: [
       "Pre wedding consultation",
       "Up to 4 hrs coverage",
-      "1x 30–60 second ceremony edit",
+      "1x 30 to 60 second ceremony edit",
     ],
   },
   {
@@ -54,8 +54,8 @@ export const weddingPackages: Package[] = [
     features: [
       "Pre wedding consultation",
       "Up to 5 hrs capturing",
-      "1x 15–30 second highlight edit (within 24 hrs)",
-      "1x 30–60 second ceremony edit",
+      "1x 15 to 30 second highlight edit (within 24 hrs)",
+      "1x 30 to 60 second ceremony edit",
     ],
   },
   {
@@ -66,9 +66,9 @@ export const weddingPackages: Package[] = [
     features: [
       "Pre wedding consultation",
       "Up to 7 hrs capturing",
-      "1x 15–30 second highlight edit (within 24 hrs)",
-      "1x 30–60 second pre-wedding bridal party edit",
-      "1x 30–60 second ceremony edit",
+      "1x 15 to 30 second highlight edit (within 24 hrs)",
+      "1x 30 to 60 second pre wedding bridal party edit",
+      "1x 30 to 60 second ceremony edit",
     ],
     featured: true,
   },
@@ -80,11 +80,11 @@ export const weddingPackages: Package[] = [
     features: [
       "Pre wedding consultation",
       "Up to 9 hrs capturing",
-      "1x 15–30 second highlight edit (within 24 hrs)",
-      "1x 30–60 second pre-wedding bridal party edit",
-      "1x 30–60 second ceremony edit",
-      "1x 30–60 second reception edit",
-      "1x 30–60 second 'Bride's Choice' edit",
+      "1x 15 to 30 second highlight edit (within 24 hrs)",
+      "1x 30 to 60 second pre wedding bridal party edit",
+      "1x 30 to 60 second ceremony edit",
+      "1x 30 to 60 second reception edit",
+      "1x 30 to 60 second Brides Choice edit",
       "Private link to all content",
       "All content delivered within 7 days",
     ],
@@ -92,7 +92,7 @@ export const weddingPackages: Package[] = [
 ];
 
 export const businessIntro =
-  "Consistent, on-brand content that does the heavy lifting on socials — without you having to be behind (or in front of) the camera. Built for businesses that want to show up online and actually look the part.";
+  "Consistent on brand content that does the heavy lifting on socials, without you having to be behind (or in front of) the camera. Built for businesses that want to show up online and actually look the part.";
 
 export const businessNotes = [
   "Need something different? Custom packages and add-ons available",
@@ -118,7 +118,7 @@ export const businessPackages: Package[] = [
     features: [
       "30 minute planning call",
       "2 hour on location shoot",
-      "2x edited videos (20–35 sec)",
+      "2x edited videos (20 to 35 sec)",
       "Full content library delivered for ongoing use",
     ],
     featured: true,
@@ -131,7 +131,7 @@ export const businessPackages: Package[] = [
     features: [
       "30 minute planning call",
       "3 hr on location shoot",
-      "2x edited videos (10–35 sec)",
+      "2x edited videos (10 to 35 sec)",
       "25 high res images",
       "Full content library delivered for ongoing use",
     ],

@@ -9,14 +9,14 @@ const choices = [
     eyebrow: "For couples",
     title: "Wedding Content",
     description:
-      "4 to 9 hours of coverage — ceremony edits, highlight reels, and same-day teasers. For modern couples wanting to relive the feeling, not just the timeline.",
+      "4 to 9 hours of coverage. Ceremony edits, highlight reels, and same day teasers. For modern couples wanting to relive the feeling, not just the timeline.",
   },
   {
     href: "/business",
     eyebrow: "For brands",
     title: "Business Content",
     description:
-      "On-location shoots with edited videos and a full content library — for new businesses starting out to established brands wanting to level up.",
+      "On location shoots with edited videos and a full content library for new businesses starting out to established brands wanting to level up.",
   },
 ] as const;
 

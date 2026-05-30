@@ -5,7 +5,7 @@ import { businessIntro, businessPackages, businessNotes } from "@/app/lib/conten
 export const metadata: Metadata = {
   title: "Business Content & Prices",
   description:
-    "Business and brand social media content packages — on-brand reels, photos and monthly content shoots. Darwin based, servicing Australia wide.",
+    "Business and brand social media content packages. On brand reels, photos and monthly content shoots. Darwin based, servicing Australia wide.",
 };
 
 export default function BusinessPage() {
