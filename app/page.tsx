@@ -69,6 +69,31 @@ export default function Home() {
             </Link>
           ))}
         </div>
+
+        {/* CTA */}
+        <section className="mx-auto mt-12 max-w-2xl text-center">
+          <p className="font-display text-2xl font-light italic text-cream">
+            Looking for a different content type? Let&apos;s chat.
+          </p>
+          <div className="mt-6 flex flex-wrap items-center justify-center gap-4">
+            <a
+              href={brand.bookingLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center rounded-full bg-cream px-7 py-3 text-sm font-medium text-brand transition-colors hover:bg-sand"
+            >
+              Enquiry Form
+            </a>
+            <a
+              href={brand.instagram}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center rounded-full border border-white/30 px-7 py-3 text-sm font-medium text-cream transition-colors hover:border-white/60"
+            >
+              Message on Instagram
+            </a>
+          </div>
+        </section>
       </main>
 
       <footer className="mt-auto border-t border-white/10 px-6 py-4">
