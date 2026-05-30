@@ -17,13 +17,13 @@ export default function PricingPage({
   notes,
 }: PricingPageProps) {
   return (
-    <div className="min-h-screen flex flex-col bg-navy text-cream">
+    <>
       <main className="flex flex-1 flex-col px-6 py-10">
         {/* Top bar */}
         <div className="mx-auto flex w-full max-w-5xl items-center justify-between">
           <Link
             href="/"
-            className="inline-flex items-center gap-2 text-sm text-cream/60 transition-colors hover:text-cream"
+            className="inline-flex items-center gap-2 text-sm text-brand/70 transition-colors hover:text-brand"
           >
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden>
               <path
@@ -38,7 +38,7 @@ export default function PricingPage({
           </Link>
           <Link
             href="/"
-            className="font-display text-xl tracking-wide text-chartreuse"
+            className="font-display text-xl tracking-wide text-brand"
           >
             {brand.name}
           </Link>
@@ -46,13 +46,13 @@ export default function PricingPage({
 
         {/* Header */}
         <header className="mx-auto mt-12 max-w-2xl text-center">
-          <p className="text-xs uppercase tracking-[0.32em] text-cream/50">
+          <p className="text-xs uppercase tracking-[0.32em] text-taupe">
             {eyebrow}
           </p>
-          <h1 className="mt-3 font-display text-5xl font-light text-cream">
+          <h1 className="mt-3 font-display text-5xl font-light text-brand">
             {title}
           </h1>
-          <p className="mt-5 text-balance text-lg leading-relaxed text-cream/70">
+          <p className="mt-5 text-balance text-lg leading-relaxed text-ink/75">
             {intro}
           </p>
         </header>
@@ -64,39 +64,37 @@ export default function PricingPage({
               key={pkg.name}
               className={`relative flex flex-col rounded-2xl border p-7 transition-all duration-300 ${
                 pkg.featured
-                  ? "border-chartreuse bg-chartreuse text-navy shadow-[0_24px_60px_-24px_rgba(0,0,0,0.7)] md:-translate-y-3"
-                  : "border-cream/10 bg-white/5 hover:border-chartreuse/30 hover:bg-white/10"
+                  ? "border-brand bg-brand text-cream shadow-[0_24px_60px_-24px_rgba(44,58,66,0.7)] md:-translate-y-3"
+                  : "border-brand/15 bg-white/50 text-ink hover:border-brand/35 hover:bg-white/80"
               }`}
             >
               {pkg.featured && (
-                <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-navy px-4 py-1 text-[0.65rem] uppercase tracking-[0.2em] text-chartreuse">
+                <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-taupe px-4 py-1 text-[0.65rem] uppercase tracking-[0.2em] text-cream">
                   Most popular
                 </span>
               )}
 
               <h2
                 className={`font-display text-2xl font-light ${
-                  pkg.featured ? "text-navy" : "text-cream"
+                  pkg.featured ? "text-cream" : "text-brand"
                 }`}
               >
                 {pkg.name}
               </h2>
               <p
                 className={`mt-1 text-sm ${
-                  pkg.featured ? "text-navy/70" : "text-cream/50"
+                  pkg.featured ? "text-cream/80" : "text-ink/60"
                 }`}
               >
                 {pkg.description}
               </p>
 
               <div className="mt-5 flex items-baseline gap-1">
-                <span className={`font-display text-4xl ${pkg.featured ? "text-navy" : "text-chartreuse"}`}>
-                  {pkg.price}
-                </span>
+                <span className="font-display text-4xl">{pkg.price}</span>
                 {pkg.cadence && (
                   <span
                     className={`text-sm ${
-                      pkg.featured ? "text-navy/60" : "text-cream/40"
+                      pkg.featured ? "text-cream/70" : "text-ink/55"
                     }`}
                   >
                     {pkg.cadence}
@@ -113,7 +111,7 @@ export default function PricingPage({
                       viewBox="0 0 16 16"
                       fill="none"
                       className={`mt-0.5 shrink-0 ${
-                        pkg.featured ? "text-navy" : "text-chartreuse"
+                        pkg.featured ? "text-taupe" : "text-brand-soft"
                       }`}
                       aria-hidden
                     >
@@ -126,7 +124,7 @@ export default function PricingPage({
                       />
                     </svg>
                     <span
-                      className={pkg.featured ? "text-navy/80" : "text-cream/70"}
+                      className={pkg.featured ? "text-cream/90" : "text-ink/75"}
                     >
                       {f}
                     </span>
@@ -140,8 +138,8 @@ export default function PricingPage({
                 rel="noopener noreferrer"
                 className={`mt-7 inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-medium transition-colors ${
                   pkg.featured
-                    ? "bg-navy text-chartreuse hover:bg-navy/80"
-                    : "bg-chartreuse text-navy hover:bg-chartreuse/80"
+                    ? "bg-cream text-brand hover:bg-sand"
+                    : "bg-brand text-cream hover:bg-brand-deep"
                 }`}
               >
                 Enquire
@@ -153,7 +151,7 @@ export default function PricingPage({
         {/* Additional notes */}
         {notes && notes.length > 0 && (
           <div className="mx-auto mt-8 max-w-6xl text-center">
-            <p className="text-xs uppercase tracking-[0.25em] text-cream/30">
+            <p className="text-xs uppercase tracking-[0.25em] text-taupe/80">
               {notes.join(" · ")}
             </p>
           </div>
@@ -161,10 +159,10 @@ export default function PricingPage({
 
         {/* Closing CTA */}
         <section className="mx-auto mt-16 max-w-2xl text-center">
-          <p className="font-display text-2xl font-light italic text-cream">
+          <p className="font-display text-2xl font-light italic text-brand">
             Not sure which package fits? Let&apos;s chat.
           </p>
-          <p className="mt-3 text-cream/60">
+          <p className="mt-3 text-ink/70">
             Every booking is a little different — tell me your date, location and
             what you&apos;re after, and I&apos;ll tailor a quote.
           </p>
@@ -173,7 +171,7 @@ export default function PricingPage({
               href={brand.bookingLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center rounded-full bg-chartreuse px-7 py-3 text-sm font-medium text-navy transition-colors hover:bg-chartreuse/80"
+              className="inline-flex items-center justify-center rounded-full bg-brand px-7 py-3 text-sm font-medium text-cream transition-colors hover:bg-brand-deep"
             >
               Get a quote
             </a>
@@ -181,7 +179,7 @@ export default function PricingPage({
               href={brand.instagram}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center rounded-full border border-cream/20 px-7 py-3 text-sm font-medium text-cream transition-colors hover:border-cream/50"
+              className="inline-flex items-center justify-center rounded-full border border-brand/30 px-7 py-3 text-sm font-medium text-brand transition-colors hover:border-brand"
             >
               Message on Instagram
             </a>
@@ -189,9 +187,9 @@ export default function PricingPage({
         </section>
       </main>
 
-      <footer className="border-t border-cream/10 px-6 py-10 text-center text-sm text-cream/40">
+      <footer className="mt-auto border-t border-brand/10 px-6 py-10 text-center text-sm text-brand/70">
         <div className="mx-auto flex max-w-3xl flex-col items-center gap-3">
-          <p className="font-display text-xl tracking-wide text-cream/80">
+          <p className="font-display text-xl tracking-wide text-brand">
             {brand.name}
           </p>
           <p>{brand.location}</p>
@@ -200,22 +198,22 @@ export default function PricingPage({
               href={brand.instagram}
               target="_blank"
               rel="noopener noreferrer"
-              className="transition-colors hover:text-cream"
+              className="transition-colors hover:text-brand"
             >
               {brand.instagramHandle}
             </a>
             <a
               href={`mailto:${brand.email}`}
-              className="transition-colors hover:text-cream"
+              className="transition-colors hover:text-brand"
             >
               {brand.email}
             </a>
           </div>
-          <p className="mt-2 text-xs text-cream/20">
+          <p className="mt-2 text-xs text-brand/40">
             © {new Date().getFullYear()} {brand.name}. All rights reserved.
           </p>
         </div>
       </footer>
-    </div>
+    </>
   );
 }

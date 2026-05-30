@@ -22,23 +22,23 @@ const choices = [
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col bg-navy text-cream">
+    <>
       <main className="flex flex-1 flex-col items-center justify-center px-6 py-16">
         {/* Hero */}
         <div className="flex flex-col items-center text-center">
           <Logo size={148} />
 
-          <h1 className="mt-8 font-display text-5xl font-light tracking-wide text-chartreuse sm:text-6xl">
+          <h1 className="mt-8 font-display text-5xl font-light tracking-wide text-brand sm:text-6xl">
             {brand.name}
           </h1>
-          <p className="mt-3 text-xs uppercase tracking-[0.42em] text-cream/50">
+          <p className="mt-3 text-xs uppercase tracking-[0.42em] text-brand/60">
             {brand.tagline}
           </p>
 
-          <p className="mt-6 max-w-xl text-balance text-lg leading-relaxed text-cream/70">
+          <p className="mt-6 max-w-xl text-balance text-lg leading-relaxed text-ink/75">
             {brand.blurb}
           </p>
-          <p className="mt-4 text-xs uppercase tracking-[0.3em] text-cream/40">
+          <p className="mt-4 text-xs uppercase tracking-[0.3em] text-taupe">
             {brand.location}
           </p>
         </div>
@@ -49,18 +49,18 @@ export default function Home() {
             <Link
               key={c.href}
               href={c.href}
-              className="group relative flex flex-col rounded-2xl border border-cream/10 bg-white/5 p-8 text-left transition-all duration-300 hover:-translate-y-1 hover:border-chartreuse/40 hover:bg-white/10 hover:shadow-[0_22px_50px_-24px_rgba(0,0,0,0.6)]"
+              className="group relative flex flex-col rounded-2xl border border-brand/15 bg-white/40 p-8 text-left transition-all duration-300 hover:-translate-y-1 hover:border-brand/40 hover:bg-white/70 hover:shadow-[0_22px_50px_-24px_rgba(44,58,66,0.5)]"
             >
-              <span className="text-[0.7rem] uppercase tracking-[0.3em] text-cream/40">
+              <span className="text-[0.7rem] uppercase tracking-[0.3em] text-taupe">
                 {c.eyebrow}
               </span>
-              <span className="mt-2 font-display text-3xl font-light text-cream">
+              <span className="mt-2 font-display text-3xl font-light text-brand">
                 {c.title}
               </span>
-              <span className="mt-3 text-sm leading-relaxed text-cream/60">
+              <span className="mt-3 text-sm leading-relaxed text-ink/70">
                 {c.description}
               </span>
-              <span className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-chartreuse">
+              <span className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-brand">
                 View prices
                 <svg
                   width="16"
@@ -87,15 +87,15 @@ export default function Home() {
           href={brand.instagram}
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-10 text-sm tracking-wide text-cream/40 underline-offset-4 transition-colors hover:text-cream hover:underline"
+          className="mt-10 text-sm tracking-wide text-brand/60 underline-offset-4 transition-colors hover:text-brand hover:underline"
         >
           See recent work on Instagram {brand.instagramHandle}
         </a>
       </main>
 
-      <footer className="border-t border-cream/10 px-6 py-10 text-center text-sm text-cream/40">
+      <footer className="mt-auto border-t border-brand/10 px-6 py-10 text-center text-sm text-brand/70">
         <div className="mx-auto flex max-w-3xl flex-col items-center gap-3">
-          <p className="font-display text-xl tracking-wide text-cream/80">
+          <p className="font-display text-xl tracking-wide text-brand">
             {brand.name}
           </p>
           <p>{brand.location}</p>
@@ -104,22 +104,22 @@ export default function Home() {
               href={brand.instagram}
               target="_blank"
               rel="noopener noreferrer"
-              className="transition-colors hover:text-cream"
+              className="transition-colors hover:text-brand"
             >
               {brand.instagramHandle}
             </a>
             <a
               href={`mailto:${brand.email}`}
-              className="transition-colors hover:text-cream"
+              className="transition-colors hover:text-brand"
             >
               {brand.email}
             </a>
           </div>
-          <p className="mt-2 text-xs text-cream/20">
+          <p className="mt-2 text-xs text-brand/40">
             © {new Date().getFullYear()} {brand.name}. All rights reserved.
           </p>
         </div>
       </footer>
-    </div>
+    </>
   );
 }
