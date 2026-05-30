@@ -165,7 +165,7 @@ export default function PricingPage({
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center rounded-full bg-cream px-7 py-3 text-sm font-medium text-brand transition-colors hover:bg-sand"
             >
-              Get a quote
+              Enquiry Form
             </a>
             <a
               href={brand.instagram}
