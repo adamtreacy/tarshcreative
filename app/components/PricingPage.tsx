@@ -44,8 +44,7 @@ export default function PricingPage({
 
         {/* Header */}
         <header className="mx-auto mt-12 max-w-2xl text-center">
-          <Logo size={200} className="mx-auto w-[160px] -mt-[76px] -mb-[40px]" />
-          <p className="text-xs uppercase tracking-[0.32em] text-taupe">
+          <p className="text-sm uppercase tracking-[0.28em] text-taupe">
             {eyebrow}
           </p>
           <p className="mt-5 text-balance text-lg leading-relaxed text-cream/75">
