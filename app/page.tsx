@@ -13,7 +13,7 @@ const choices = [
     href: "/business",
     eyebrow: "For brands",
     title: "Business Content",
-    description: "Content that makes your brand impossible to scroll past.",
+    description: "Make your brand impossible to scroll past.",
   },
 ] as const;
 
