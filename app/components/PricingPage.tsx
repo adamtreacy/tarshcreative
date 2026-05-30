@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Logo from "@/app/components/Logo";
 import { brand, type Package } from "@/app/lib/content";
 
 type PricingPageProps = {
@@ -36,11 +37,8 @@ export default function PricingPage({
             </svg>
             Back
           </Link>
-          <Link
-            href="/"
-            className="font-display text-xl tracking-wide text-cream"
-          >
-            {brand.name}
+          <Link href="/">
+            <Logo size={80} />
           </Link>
         </div>
 
