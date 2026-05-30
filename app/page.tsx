@@ -25,10 +25,6 @@ export default function Home() {
         <div className="flex flex-col items-center text-center">
           <Logo size={416} className="w-[160px] sm:w-[224px] lg:w-[416px] -mt-[76px] sm:-mt-[106px] lg:-mt-[198px] -mb-[72px] sm:-mb-[104px] lg:-mb-[196px]" />
 
-          <p className="mt-4 text-xs uppercase tracking-[0.42em] text-cream/60">
-            {brand.tagline}
-          </p>
-
           <p className="mt-3 text-xs uppercase tracking-[0.3em] text-taupe">
             {brand.location}
           </p>
