@@ -158,10 +158,6 @@ export default function PricingPage({
           <p className="font-display text-2xl font-light italic text-cream">
             Not sure which package fits? Let&apos;s chat.
           </p>
-          <p className="mt-3 text-cream/70">
-            Every booking is a little different. Tell me your date, location and
-            what you&apos;re after, and I&apos;ll tailor a quote.
-          </p>
           <div className="mt-6 flex flex-wrap items-center justify-center gap-4">
             <a
               href={brand.bookingLink}
