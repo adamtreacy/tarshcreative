@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default function BusinessPage() {
   return (
     <PricingPage
-      eyebrow="For brands"
+      eyebrow="Business Content Package"
       title="Business Content"
       intro={businessIntro}
       packages={businessPackages}

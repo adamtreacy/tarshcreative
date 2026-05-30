@@ -26,7 +26,7 @@ export type Package = {
 };
 
 export const weddingIntro =
-  "For modern couples wanting to relive the feeling. Not just the timeline.";
+  "Relive the feeling, not just the timeline.";
 
 export const weddingNotes = [
   "Additional coverage available at $120/hr",
@@ -92,7 +92,7 @@ export const weddingPackages: Package[] = [
 ];
 
 export const businessIntro =
-  "A strong online presence is a non-negotiable marketing tool. We know keeping up with it can be a pain, so let us do the heavy lifting for you.";
+  "Make your brand impossible to scroll past.";
 
 export const businessNotes = [
   "Need something different? Custom packages and add-ons available",

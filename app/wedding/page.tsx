@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default function WeddingPage() {
   return (
     <PricingPage
-      eyebrow="Wedding Content Creation"
+      eyebrow="Wedding Content Package"
       title="Wedding Content"
       intro={weddingIntro}
       packages={weddingPackages}
