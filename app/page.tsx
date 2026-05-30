@@ -78,8 +78,6 @@ export default function Home() {
             <a href={brand.instagram} target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-cream">{brand.instagramHandle}</a>
             <span>·</span>
             <a href={`mailto:${brand.email}`} className="transition-colors hover:text-cream">{brand.email}</a>
-            <span>·</span>
-            <span>{brand.location}</span>
           </div>
         </div>
       </footer>
