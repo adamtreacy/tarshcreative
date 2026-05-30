@@ -23,15 +23,12 @@ export default function Home() {
       <main className="flex flex-1 flex-col items-center justify-center px-6 py-16">
         {/* Hero */}
         <div className="flex flex-col items-center text-center">
-          <Logo size={520} className="w-[200px] sm:w-[280px] lg:w-[520px] -mt-[95px] sm:-mt-[133px] lg:-mt-[247px] -mb-[90px] sm:-mb-[130px] lg:-mb-[245px]" />
+          <Logo size={416} className="w-[160px] sm:w-[224px] lg:w-[416px] -mt-[76px] sm:-mt-[106px] lg:-mt-[198px] -mb-[72px] sm:-mb-[104px] lg:-mb-[196px]" />
 
           <p className="mt-4 text-xs uppercase tracking-[0.42em] text-cream/60">
             {brand.tagline}
           </p>
 
-          <p className="mt-4 max-w-xl text-balance text-lg leading-relaxed text-cream/75">
-            {brand.blurb}
-          </p>
           <p className="mt-3 text-xs uppercase tracking-[0.3em] text-taupe">
             {brand.location}
           </p>
