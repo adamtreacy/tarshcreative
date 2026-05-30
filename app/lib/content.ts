@@ -92,7 +92,7 @@ export const weddingPackages: Package[] = [
 ];
 
 export const businessIntro =
-  "Consistent on brand content that does the heavy lifting on socials, without you having to be behind (or in front of) the camera. Built for businesses that want to show up online and actually look the part.";
+  "A strong online presence is a non-negotiable marketing tool. We know keeping up with it can be a pain, so let us do the heavy lifting for you.";
 
 export const businessNotes = [
   "Need something different? Custom packages and add-ons available",
