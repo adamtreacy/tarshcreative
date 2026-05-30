@@ -13,7 +13,7 @@ export const brand = {
   instagram: "https://instagram.com/tarshcreative",
   instagramHandle: "@tarshcreative",
   email: "tarshcreative@ga-productions.com",
-  bookingLink: "https://tr.ee/R_cx26n3jn",
+  bookingLink: "https://forms.gle/G7LcuPKJcXAmYr4i7",
 };
 
 export type Package = {
