@@ -37,11 +37,8 @@ export default function PricingPage({
             </svg>
             Back
           </Link>
-          <Link
-            href="/"
-            className="inline-flex items-center gap-2 text-sm text-cream/70 transition-colors hover:text-cream"
-          >
-            Home
+          <Link href="/">
+            <Logo size={80} />
           </Link>
         </div>
 
