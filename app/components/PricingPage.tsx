@@ -37,13 +37,17 @@ export default function PricingPage({
             </svg>
             Back
           </Link>
-          <Link href="/">
-            <Logo size={80} />
+          <Link
+            href="/"
+            className="inline-flex items-center gap-2 text-sm text-cream/70 transition-colors hover:text-cream"
+          >
+            Home
           </Link>
         </div>
 
         {/* Header */}
         <header className="mx-auto mt-12 max-w-2xl text-center">
+          <Logo size={200} className="mx-auto w-[160px] -mt-[76px] -mb-[78px]" />
           <p className="text-xs uppercase tracking-[0.32em] text-taupe">
             {eyebrow}
           </p>
