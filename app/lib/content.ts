@@ -23,6 +23,7 @@ export type Package = {
   description: string;
   features: string[];
   featured?: boolean;
+  bookingLink?: string;
 };
 
 export const weddingIntro =
@@ -33,6 +34,8 @@ export const weddingNotes = [
   "Recording of vows and speeches at extra cost",
   "Travel fees may apply",
 ];
+
+const weddingBookingLink = "https://docs.google.com/forms/d/e/1FAIpQLSeU85Pj5vrdqJBrp0XUMnv-d6ndJCb3VchHMmqv9MorPFTfwQ/viewform?usp=publish-editor";
 
 export const weddingPackages: Package[] = [
   {
@@ -45,6 +48,7 @@ export const weddingPackages: Package[] = [
       "Up to 4 hrs coverage",
       "1x 30 to 60 second ceremony edit",
     ],
+    bookingLink: weddingBookingLink,
   },
   {
     name: "The Essentials",
@@ -57,6 +61,7 @@ export const weddingPackages: Package[] = [
       "1x 15 to 30 second highlight edit (within 24 hrs)",
       "1x 30 to 60 second ceremony edit",
     ],
+    bookingLink: weddingBookingLink,
   },
   {
     name: "The Ultimate",
@@ -71,6 +76,7 @@ export const weddingPackages: Package[] = [
       "1x 30 to 60 second ceremony edit",
     ],
     featured: true,
+    bookingLink: weddingBookingLink,
   },
   {
     name: "The Full Story",
@@ -88,6 +94,7 @@ export const weddingPackages: Package[] = [
       "Private link to all content",
       "All content delivered within 7 days",
     ],
+    bookingLink: weddingBookingLink,
   },
 ];
 

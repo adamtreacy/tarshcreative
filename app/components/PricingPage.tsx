@@ -126,7 +126,7 @@ export default function PricingPage({
               </ul>
 
               <a
-                href={brand.bookingLink}
+                href={pkg.bookingLink ?? brand.bookingLink}
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`mt-7 inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-medium transition-colors ${
