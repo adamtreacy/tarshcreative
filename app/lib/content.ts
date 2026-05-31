@@ -105,6 +105,8 @@ export const businessNotes = [
   "Need something different? Custom packages and add-ons available",
 ];
 
+const businessBookingLink = "https://docs.google.com/forms/d/e/1FAIpQLSfxridE62y8vkWreixnU9opEncN2-5-lDDPxCa3R9sGspNKXw/viewform?usp=publish-editor";
+
 export const businessPackages: Package[] = [
   {
     name: "Package One",
@@ -116,6 +118,7 @@ export const businessPackages: Package[] = [
       "1 hr on location shoot",
       "Full content library delivered for ongoing use",
     ],
+    bookingLink: businessBookingLink,
   },
   {
     name: "Package Two",
@@ -129,6 +132,7 @@ export const businessPackages: Package[] = [
       "Full content library delivered for ongoing use",
     ],
     featured: true,
+    bookingLink: businessBookingLink,
   },
   {
     name: "Package Three",
@@ -142,5 +146,6 @@ export const businessPackages: Package[] = [
       "25 high res images",
       "Full content library delivered for ongoing use",
     ],
+    bookingLink: businessBookingLink,
   },
 ];
