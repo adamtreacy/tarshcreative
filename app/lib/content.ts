@@ -112,7 +112,7 @@ export const businessPackages: Package[] = [
     name: "Package One",
     price: "$870",
     cadence: "+ GST",
-    description: "Perfect for new or small businesses starting out.",
+    description: "We capture, you edit.",
     features: [
       "30 minute planning call",
       "1 hr on location shoot",
@@ -128,7 +128,7 @@ export const businessPackages: Package[] = [
     features: [
       "30 minute planning call",
       "2 hour on location shoot",
-      "2x videoed videos (20 to 35 sec)",
+      "2x edited videos (20 to 35 sec)",
       "Full content library delivered for ongoing use",
     ],
     featured: true,
@@ -142,7 +142,7 @@ export const businessPackages: Package[] = [
     features: [
       "30 minute planning call",
       "3 hr on location shoot",
-      "2x videoed videos (10 to 35 sec)",
+      "2x edited videos (10 to 35 sec)",
       "25 high res images",
       "Full content library delivered for ongoing use",
     ],
