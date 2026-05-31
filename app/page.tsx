@@ -26,9 +26,9 @@ export default function Home() {
           <Logo size={416} className="w-[160px] sm:w-[224px] lg:w-[416px] -mt-[76px] sm:-mt-[106px] lg:-mt-[198px] -mb-[72px] sm:-mb-[104px] lg:-mb-[196px]" />
 
           <p className="mt-3 text-xs uppercase tracking-[0.3em] text-taupe text-center">
-            <span className="whitespace-nowrap">Darwin Based</span>
-            <span className="mx-2">·</span>
-            <span className="whitespace-nowrap">Servicing Australia Wide</span>
+            <span>Darwin Based ·</span>
+            <br className="sm:hidden" />
+            <span className="sm:ml-2">Servicing Australia Wide</span>
           </p>
         </div>
 
