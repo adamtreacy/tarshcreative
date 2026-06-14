@@ -27,7 +27,7 @@ export type Package = {
 };
 
 export const weddingIntro =
-  "Relive the feeling, not just the timeline.";
+  "Relive the moments that you can't plan for.";
 
 export const weddingNotes = [
   "Additional coverage available at $120/hr",
