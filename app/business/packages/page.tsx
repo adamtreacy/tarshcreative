@@ -16,7 +16,7 @@ export default function BusinessPackagesPage() {
       intro={businessIntro}
       packages={businessPackages}
       notes={businessNotes}
-      backHref="/business"
+      backHref="/"
     />
   );
 }
