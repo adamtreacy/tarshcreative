@@ -8,6 +8,8 @@ type PricingPageProps = {
   intro: string;
   packages: Package[];
   notes?: string[];
+  backHref?: string;
+  ctaLabel?: string;
 };
 
 export default function PricingPage({
@@ -16,6 +18,8 @@ export default function PricingPage({
   intro,
   packages,
   notes,
+  backHref = "/",
+  ctaLabel = "Book Now",
 }: PricingPageProps) {
   return (
     <>
@@ -23,7 +27,7 @@ export default function PricingPage({
         {/* Top bar */}
         <div className="mx-auto flex w-full max-w-5xl items-center justify-between">
           <Link
-            href="/"
+            href={backHref}
             className="inline-flex items-center gap-2 text-sm text-cream/70 transition-colors hover:text-cream"
           >
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden>
@@ -135,7 +139,7 @@ export default function PricingPage({
                     : "bg-cream text-brand hover:bg-sand"
                 }`}
               >
-                Book Now
+                {ctaLabel}
               </a>
             </div>
           ))}

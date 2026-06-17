@@ -107,6 +107,74 @@ export const businessNotes = [
 
 const businessBookingLink = "https://docs.google.com/forms/d/e/1FAIpQLSfxridE62y8vkWreixnU9opEncN2-5-lDDPxCa3R9sGspNKXw/viewform?usp=publish-editor";
 
+export const subscriptionIntro =
+  "Consistent content, every month. No brief needed.";
+
+export const subscriptionNotes = [
+  "All subscriptions include a monthly planning call",
+  "Cancel or pause anytime with 30 days notice",
+];
+
+const subscriptionBookingLink = "https://forms.gle/G7LcuPKJcXAmYr4i7";
+
+export const subscriptionPackages: Package[] = [
+  {
+    name: "Starter",
+    price: "$TBD",
+    cadence: "/ month",
+    description: "For new businesses building their online presence.",
+    features: [
+      "Monthly planning call",
+      "1 hr on location shoot",
+      "Full content library delivered",
+    ],
+    bookingLink: subscriptionBookingLink,
+  },
+  {
+    name: "Growth",
+    price: "$TBD",
+    cadence: "/ month",
+    description: "For growing brands needing regular content.",
+    features: [
+      "Monthly planning call",
+      "2 hr on location shoot",
+      "2x edited videos",
+      "Full content library delivered",
+    ],
+    featured: true,
+    bookingLink: subscriptionBookingLink,
+  },
+  {
+    name: "Pro",
+    price: "$TBD",
+    cadence: "/ month",
+    description: "For established businesses wanting to level up.",
+    features: [
+      "Monthly planning call",
+      "3 hr on location shoot",
+      "3x edited videos",
+      "25 high res images",
+      "Full content library delivered",
+    ],
+    bookingLink: subscriptionBookingLink,
+  },
+  {
+    name: "Premium",
+    price: "$TBD",
+    cadence: "/ month",
+    description: "Full-scale monthly content for serious brands.",
+    features: [
+      "Monthly planning call",
+      "Half day shoot (4 hrs)",
+      "5x edited videos",
+      "50 high res images",
+      "Priority turnaround",
+      "Full content library delivered",
+    ],
+    bookingLink: subscriptionBookingLink,
+  },
+];
+
 export const businessPackages: Package[] = [
   {
     name: "Package One",
