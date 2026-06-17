@@ -18,6 +18,7 @@ export default function BusinessSubscriptionsPage() {
       notes={subscriptionNotes}
       backHref="/business"
       ctaLabel="Subscribe"
+      warm
     />
   );
 }

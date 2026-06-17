@@ -66,7 +66,11 @@ export default function BusinessPage() {
             <Link
               key={c.href}
               href={c.href}
-              className="group relative flex flex-col rounded-2xl border border-white/15 bg-white/10 p-8 text-left transition-all duration-300 hover:-translate-y-1 hover:border-white/30 hover:bg-white/20 hover:shadow-[0_22px_50px_-24px_rgba(0,0,0,0.4)]"
+              className={`group relative flex flex-col rounded-2xl border p-8 text-left transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_22px_50px_-24px_rgba(0,0,0,0.4)] ${
+                  c.href === "/business/subscriptions"
+                    ? "border-taupe/20 bg-taupe/10 hover:border-taupe/40 hover:bg-taupe/20"
+                    : "border-white/15 bg-white/10 hover:border-white/30 hover:bg-white/20"
+                }`}
             >
               <span className="text-[0.7rem] uppercase tracking-[0.3em] text-taupe">
                 {c.eyebrow}

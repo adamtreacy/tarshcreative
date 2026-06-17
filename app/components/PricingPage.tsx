@@ -10,6 +10,7 @@ type PricingPageProps = {
   notes?: string[];
   backHref?: string;
   ctaLabel?: string;
+  warm?: boolean;
 };
 
 export default function PricingPage({
@@ -20,6 +21,7 @@ export default function PricingPage({
   notes,
   backHref = "/",
   ctaLabel = "Book Now",
+  warm = false,
 }: PricingPageProps) {
   return (
     <>
@@ -63,8 +65,12 @@ export default function PricingPage({
               key={pkg.name}
               className={`relative flex flex-col rounded-2xl border p-7 transition-all duration-300 ${
                 pkg.featured
-                  ? "border-cream/40 bg-cream text-brand shadow-[0_24px_60px_-24px_rgba(0,0,0,0.5)] md:-translate-y-3"
-                  : "border-white/15 bg-white/10 text-cream hover:border-white/30 hover:bg-white/20"
+                  ? warm
+                    ? "border-taupe/60 bg-taupe text-brand shadow-[0_24px_60px_-24px_rgba(0,0,0,0.5)] md:-translate-y-3"
+                    : "border-cream/40 bg-cream text-brand shadow-[0_24px_60px_-24px_rgba(0,0,0,0.5)] md:-translate-y-3"
+                  : warm
+                    ? "border-taupe/20 bg-taupe/10 text-cream hover:border-taupe/40 hover:bg-taupe/20"
+                    : "border-white/15 bg-white/10 text-cream hover:border-white/30 hover:bg-white/20"
               }`}
             >
               {pkg.featured && (
@@ -136,7 +142,9 @@ export default function PricingPage({
                 className={`mt-7 inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-medium transition-colors ${
                   pkg.featured
                     ? "bg-brand text-cream hover:bg-brand-deep"
-                    : "bg-cream text-brand hover:bg-sand"
+                    : warm
+                      ? "bg-taupe/30 text-cream border border-taupe/50 hover:bg-taupe/50"
+                      : "bg-cream text-brand hover:bg-sand"
                 }`}
               >
                 {ctaLabel}
