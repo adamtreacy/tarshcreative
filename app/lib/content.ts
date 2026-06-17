@@ -108,68 +108,68 @@ export const businessNotes = [
 const businessBookingLink = "https://docs.google.com/forms/d/e/1FAIpQLSfxridE62y8vkWreixnU9opEncN2-5-lDDPxCa3R9sGspNKXw/viewform?usp=publish-editor";
 
 export const subscriptionIntro =
-  "Consistent content, every month. No brief needed.";
+  "Never run out of content again. We show up, shoot, and deliver — every month.";
 
 export const subscriptionNotes = [
-  "All subscriptions include a monthly planning call",
-  "Cancel or pause anytime with 30 days notice",
+  "Minimum 3 month commitment",
+  "Commit to 6 months for 10% off · Commit to 12 months for 20% off",
 ];
 
 const subscriptionBookingLink = "https://forms.gle/G7LcuPKJcXAmYr4i7";
 
 export const subscriptionPackages: Package[] = [
   {
-    name: "Starter",
-    price: "$TBD",
-    cadence: "/ month",
-    description: "For new businesses building their online presence.",
+    name: "Self-Edit",
+    price: "$500",
+    cadence: "/ month + GST",
+    description: "High-quality content to use and curate yourself.",
     features: [
-      "Monthly planning call",
-      "1 hr on location shoot",
-      "Full content library delivered",
+      "1 hr on location shoot per month",
+      "Private link to all captured content",
+      "Yours to use freely",
     ],
     bookingLink: subscriptionBookingLink,
   },
   {
     name: "Growth",
-    price: "$TBD",
-    cadence: "/ month",
-    description: "For growing brands needing regular content.",
+    price: "$1,500",
+    cadence: "/ month + GST",
+    description: "For businesses ready to grow their social media presence.",
     features: [
-      "Monthly planning call",
-      "2 hr on location shoot",
-      "2x edited videos",
-      "Full content library delivered",
+      "2 hr on location shoot per month",
+      "8x edited short form videos per month",
+      "Private link to all captured content",
+    ],
+    bookingLink: subscriptionBookingLink,
+  },
+  {
+    name: "Pro",
+    price: "$2,500",
+    cadence: "/ month + GST",
+    description: "Every post professionally edited and curated for your brand.",
+    features: [
+      "4 hr on location shoot per month",
+      "Monthly content planning meeting",
+      "12x edited short form videos per month",
+      "20x professional photos per month",
+      "Private link to all captured content",
     ],
     featured: true,
     bookingLink: subscriptionBookingLink,
   },
   {
-    name: "Pro",
-    price: "$TBD",
-    cadence: "/ month",
-    description: "For established businesses wanting to level up.",
+    name: "Agency",
+    price: "$4,500",
+    cadence: "/ month + GST",
+    description: "Full-scale content production for brands that never stop posting.",
     features: [
-      "Monthly planning call",
-      "3 hr on location shoot",
-      "3x edited videos",
-      "25 high res images",
-      "Full content library delivered",
-    ],
-    bookingLink: subscriptionBookingLink,
-  },
-  {
-    name: "Premium",
-    price: "$TBD",
-    cadence: "/ month",
-    description: "Full-scale monthly content for serious brands.",
-    features: [
-      "Monthly planning call",
-      "Half day shoot (4 hrs)",
-      "5x edited videos",
-      "50 high res images",
+      "2x shoots per month (4 hrs each)",
+      "Monthly strategy session",
+      "24x edited short form videos per month",
+      "40x professional photos per month",
+      "Content calendar planning",
       "Priority turnaround",
-      "Full content library delivered",
+      "Private link to all captured content",
     ],
     bookingLink: subscriptionBookingLink,
   },
