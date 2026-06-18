@@ -111,8 +111,8 @@ export const subscriptionIntro =
   "Never run out of content again. We show up, shoot, and deliver — every month.";
 
 export const subscriptionNotes = [
-  "Minimum 3 month commitment",
-  "Commit to 6 months for 10% off · Commit to 12 months for 20% off",
+  "Minimum 2 month commitment",
+  "Commit to 4 months for 10% off · Commit to 6 months for 20% off",
 ];
 
 const subscriptionBookingLink = "https://forms.gle/G7LcuPKJcXAmYr4i7";
@@ -137,7 +137,7 @@ export const subscriptionPackages: Package[] = [
     description: "For businesses ready to grow their social media presence.",
     features: [
       "2 hr on location shoot per month",
-      "8x edited short form videos per month",
+      "8x edited content pieces per month",
       "Private link to all captured content",
     ],
     bookingLink: subscriptionBookingLink,
@@ -150,8 +150,8 @@ export const subscriptionPackages: Package[] = [
     features: [
       "4 hr on location shoot per month",
       "Monthly content planning meeting",
-      "12x edited short form videos per month",
-      "20x professional photos per month",
+      "12x edited content pieces per month",
+      "20x edited content pieces per month",
       "Private link to all captured content",
     ],
     featured: true,
@@ -165,8 +165,8 @@ export const subscriptionPackages: Package[] = [
     features: [
       "2x shoots per month (4 hrs each)",
       "Monthly strategy session",
-      "24x edited short form videos per month",
-      "40x professional photos per month",
+      "24x edited content pieces per month",
+      "40x edited content pieces per month",
       "Content calendar planning",
       "Priority turnaround",
       "Private link to all captured content",
