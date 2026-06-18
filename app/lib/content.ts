@@ -108,7 +108,7 @@ export const businessNotes = [
 const businessBookingLink = "https://docs.google.com/forms/d/e/1FAIpQLSfxridE62y8vkWreixnU9opEncN2-5-lDDPxCa3R9sGspNKXw/viewform?usp=publish-editor";
 
 export const subscriptionIntro =
-  "Never run out of content again. We show up, shoot, and deliver — every month.";
+  "Never run out of content again. We show up, shoot, and deliver. Every month.";
 
 export const subscriptionNotes = [
   "Minimum 2 month commitment",

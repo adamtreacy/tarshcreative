@@ -18,8 +18,8 @@ const jost = Jost({
 export const metadata: Metadata = {
   metadataBase: new URL("https://tarshcreative.com"),
   title: {
-    default: "Tarsh Creative — Wedding & Business Content",
-    template: "%s — Tarsh Creative",
+    default: "Tarsh Creative |Wedding & Business Content",
+    template: "%s |Tarsh Creative",
   },
   description:
     "Tarsh Creative captures wedding and business social media content, shot on professional equipment. Darwin-based, servicing Australia wide.",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     "Australia wedding content",
   ],
   openGraph: {
-    title: "Tarsh Creative — Wedding & Business Content",
+    title: "Tarsh Creative |Wedding & Business Content",
     description:
       "Wedding and business social media content, shot on professional equipment. Darwin-based, servicing Australia wide.",
     url: "https://tarshcreative.com",
