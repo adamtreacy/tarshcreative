@@ -151,7 +151,6 @@ export const subscriptionPackages: Package[] = [
       "4 hr on location shoot per month",
       "Monthly content planning meeting",
       "12x edited content pieces per month",
-      "20x edited content pieces per month",
       "Private link to all captured content",
     ],
     featured: true,
@@ -165,8 +164,7 @@ export const subscriptionPackages: Package[] = [
     features: [
       "2x shoots per month (4 hrs each)",
       "Monthly strategy session",
-      "24x edited content pieces per month",
-      "40x edited content pieces per month",
+      "30x edited content pieces per month",
       "Content calendar planning",
       "Priority turnaround",
       "Private link to all captured content",
