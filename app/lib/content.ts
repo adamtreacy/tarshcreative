@@ -196,13 +196,13 @@ export const corporateBaseIncludes = [
   "Pre-event planning call",
   "Professional camera & audio kit",
   "Travel within 30km of Darwin",
-  "Raw footage library",
 ];
 
 export const corporateEditing: RateItem[] = [
   { label: "Social media edit (under 60s)", price: "$150 / video + GST" },
   { label: "Social media edit (60–90s)", price: "$250 / video + GST" },
   { label: "Event highlight video (2–5 min)", price: "$1,150 + GST" },
+  { label: "Footage library", price: "$250 + GST", note: "A curated library of the day's best footage, unedited and ready to use." },
 ];
 
 export const corporateAddons: RateItem[] = [
