@@ -79,12 +79,10 @@ export default function CorporateQuoteBuilder() {
     const extraHrs = addonQty("extra-hours");
     if (extraHrs > 0) lines.push(`Additional capture hours × ${extraHrs} — $${extraHrs * 200} + GST`);
     if (addonQty("second-shooter") > 0) lines.push(`Second shooter — ${baseRate.price} + GST`);
-    if (addonQty("travel") > 0) lines.push(`Extended travel — $1 / km beyond 30km`);
     if (urgentSelected) lines.push(`Urgent turnaround — +25% of total`);
 
     lines.push("");
     lines.push(`Estimated total (excl. GST): $${total.toLocaleString()}`);
-    if (addonQty("travel") > 0) lines.push(`(Travel costs added separately based on distance)`);
     if (urgentSelected) lines.push(`(Urgent surcharge of 25% applied)`);
 
     return lines.join("\n");
@@ -278,7 +276,7 @@ export default function CorporateQuoteBuilder() {
         <div className="flex items-end justify-between">
           <div>
             <p className="text-[0.7rem] uppercase tracking-[0.25em] text-taupe/70">Estimated total</p>
-            <p className="mt-1 text-[0.65rem] text-cream/40">Excl. GST · travel costs added separately</p>
+            <p className="mt-1 text-[0.65rem] text-cream/40">All prices exclude GST</p>
           </div>
           <div className="text-right">
             <span className="font-display text-4xl text-cream">${total.toLocaleString()}</span>
@@ -287,9 +285,6 @@ export default function CorporateQuoteBuilder() {
         </div>
         {urgentSelected && (
           <p className="mt-3 text-xs text-taupe/80">Urgent surcharge of 25% applied to subtotal of ${subtotal.toLocaleString()}.</p>
-        )}
-        {addonQty("travel") > 0 && (
-          <p className="mt-2 text-xs text-taupe/80">Travel billed at $1/km beyond 30km of Darwin.</p>
         )}
         {addonQty("second-shooter") > 0 && (
           <p className="mt-2 text-xs text-taupe/80">Second shooter rate matches your selected base rate ({baseRate.price} + GST).</p>
