@@ -276,7 +276,6 @@ export default function CorporateQuoteBuilder() {
         <div className="flex items-end justify-between">
           <div>
             <p className="text-[0.7rem] uppercase tracking-[0.25em] text-taupe/70">Estimated total</p>
-            <p className="mt-1 text-[0.65rem] text-cream/40">All prices exclude GST</p>
           </div>
           <div className="text-right">
             <span className="font-display text-4xl text-cream">${total.toLocaleString()}</span>
