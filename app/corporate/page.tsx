@@ -2,8 +2,6 @@ import Link from "next/link";
 import Logo from "@/app/components/Logo";
 import {
   brand,
-  corporateIntro,
-  corporateSubIntro,
   corporateEventTypes,
   corporateBaseRates,
   corporateBaseIncludes,
@@ -99,14 +97,14 @@ export default function CorporatePage() {
           </h2>
           <div className="rounded-2xl border border-white/15 bg-white/10 divide-y divide-white/10">
             {corporateEditing.map((item) => (
-              <div key={item.label} className="flex items-center justify-between px-7 py-4 gap-4">
-                <span className="text-sm text-cream/80">{item.label}</span>
-                <div className="text-right shrink-0">
-                  <span className="text-sm font-medium text-cream">{item.price}</span>
+              <div key={item.label} className="flex items-start justify-between px-7 py-4 gap-4">
+                <div>
+                  <span className="text-sm text-cream/80">{item.label}</span>
                   {item.note && (
-                    <span className="block text-xs text-cream/45">{item.note}</span>
+                    <span className="block mt-0.5 text-xs text-cream/45">{item.note}</span>
                   )}
                 </div>
+                <span className="text-sm font-medium text-cream shrink-0">{item.price}</span>
               </div>
             ))}
           </div>
