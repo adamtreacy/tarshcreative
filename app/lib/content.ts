@@ -202,17 +202,17 @@ export const corporateBaseIncludes = [
 ];
 
 export const corporateEditing: RateItem[] = [
-  { id: "social-60", label: "Social media edit (under 60s)", price: "$250 / video + GST", value: 250, qtySelectable: true },
-  { id: "social-90", label: "Social media edit (60–90s)", price: "$350 / video + GST", value: 350, qtySelectable: true },
-  { id: "highlight", label: "Long form video (2–5 min)", price: "$1,050 + GST", value: 1050, qtySelectable: true, note: "Event highlights, speeches and other standout moments." },
+  { id: "social-60", label: "Social media edit", price: "$250 / video + GST", value: 250, qtySelectable: true, note: "Short-form edited content, ready to post to your socials." },
+  { id: "social-90", label: "Social media edit", price: "$350 / video + GST", value: 350, qtySelectable: true, note: "Mid-form edited content for more in-depth storytelling." },
+  { id: "highlight", label: "Long form video", price: "$1,050 + GST", value: 1050, qtySelectable: true, note: "Event highlights, speeches and other standout moments." },
   { id: "footage", label: "Footage library", price: "$500 + GST", value: 500, note: "A curated library of the day's best footage, unedited and ready to use." },
 ];
 
 export const corporateAddons: RateItem[] = [
-  { id: "extra-hours", label: "Additional capture hours", price: "$200 / hr + GST", value: 200, qtySelectable: true },
-  { id: "second-shooter", label: "Second shooter", price: "Matches your base rate", value: 0 },
-  { id: "travel", label: "Extended travel", price: "$1 / km beyond 30km", value: 0 },
-  { id: "urgent", label: "Urgent turnaround (under 72 hrs)", price: "+25% of total", value: 0 },
+  { id: "extra-hours", label: "Additional capture hours", price: "$200 / hr + GST", value: 200, qtySelectable: true, note: "Extra time on location beyond your booked session." },
+  { id: "second-shooter", label: "Second shooter", price: "Matches your base rate", value: 0, note: "A second camera operator to capture more of the day." },
+  { id: "travel", label: "Extended travel", price: "$1 / km beyond 30km", value: 0, note: "For events beyond 30km from Darwin CBD." },
+  { id: "urgent", label: "Urgent turnaround", price: "+25% of total", value: 0, note: "Content delivered within 72 hours of your event." },
 ];
 
 export const corporateBookingLink = "https://forms.gle/EEzthxACjLroNHxu9";

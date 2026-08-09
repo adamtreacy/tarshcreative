@@ -225,11 +225,10 @@ export default function CorporateQuoteBuilder() {
             return (
               <div key={item.id} className={`flex items-start justify-between px-7 py-4 gap-4 transition-colors ${active ? "bg-white/5" : ""}`}>
                 <div className="flex-1 min-w-0">
-                  <span className="text-sm text-cream/80">{item.label}</span>
+                  <span className="text-sm text-cream/80">{item.label} — {item.price}</span>
                   {item.note && (
                     <span className="block mt-0.5 text-xs text-cream/45">{item.note}</span>
                   )}
-                  <span className="block mt-0.5 text-xs text-cream/50">{item.price}</span>
                 </div>
                 {item.qtySelectable ? (
                   <Stepper value={qty} onChange={(v) => setEditingQty(item.id, v)} />
@@ -254,8 +253,10 @@ export default function CorporateQuoteBuilder() {
             return (
               <div key={item.id} className={`flex items-start justify-between px-7 py-4 gap-4 transition-colors ${active ? "bg-white/5" : ""}`}>
                 <div className="flex-1 min-w-0">
-                  <span className="text-sm text-cream/80">{item.label}</span>
-                  <span className="block mt-0.5 text-xs text-cream/50">{item.price}</span>
+                  <span className="text-sm text-cream/80">{item.label} — {item.price}</span>
+                  {item.note && (
+                    <span className="block mt-0.5 text-xs text-cream/45">{item.note}</span>
+                  )}
                 </div>
                 {item.qtySelectable ? (
                   <Stepper value={qty} onChange={(v) => setAddonQty(item.id, v)} />
