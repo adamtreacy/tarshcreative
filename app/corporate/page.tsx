@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Logo from "@/app/components/Logo";
 import CorporateQuoteBuilder from "@/app/components/CorporateQuoteBuilder";
-import { brand, corporateEventTypes, corporateIntro } from "@/app/lib/content";
+import { brand, corporateEventTypes } from "@/app/lib/content";
 
 export const metadata = {
   title: "Corporate Events",
@@ -42,7 +42,6 @@ export default function CorporatePage() {
           <p className="mt-4 font-display text-2xl font-light text-cream/85">
             {corporateEventTypes}
           </p>
-          <p className="mt-3 text-sm text-cream/55">{corporateIntro}</p>
         </header>
 
         {/* Interactive Quote Builder */}
