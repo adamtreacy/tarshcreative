@@ -103,7 +103,11 @@ export default function CorporateQuoteBuilder() {
       (form.notes ? `\nNotes:\n${form.notes}\n` : "") +
       `\nLooking forward to hearing from you!`
     );
-    window.location.href = `mailto:${brand.email}?subject=${subject}&body=${body}`;
+    const link = document.createElement("a");
+    link.href = `mailto:${brand.email}?subject=${subject}&body=${body}`;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   }
 
   // ── stepper component ────────────────────────────────────────────────────────

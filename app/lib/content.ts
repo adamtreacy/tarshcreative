@@ -210,7 +210,7 @@ export const corporateEditing: RateItem[] = [
 
 export const corporateAddons: RateItem[] = [
   { id: "extra-hours", label: "Additional capture hours", price: "$200 / hr + GST", value: 200, qtySelectable: true, note: "Extra time on location beyond your booked session." },
-  { id: "second-shooter", label: "Second shooter", price: "Matches your base rate", value: 0, note: "A second camera operator to capture more of the day." },
+  { id: "second-shooter", label: "Second shooter", price: "$600 / $950 + GST", value: 0, note: "A second camera operator to capture more of the day." },
   { id: "travel", label: "Extended travel", price: "$1 / km beyond 30km", value: 0, note: "For events beyond 30km from Darwin CBD." },
   { id: "urgent", label: "Urgent turnaround", price: "+25% of total", value: 0, note: "Content delivered within 72 hours of your event." },
 ];
