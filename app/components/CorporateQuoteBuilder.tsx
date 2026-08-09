@@ -355,7 +355,9 @@ export default function CorporateQuoteBuilder() {
           </div>
 
           <p className="text-[0.7rem] text-cream/35">
-            Clicking &quot;Send Enquiry&quot; will open your email client with your quote pre-filled and ready to send.
+            Clicking &quot;Send Enquiry&quot; will open your default email client with your quote pre-filled and ready to send. If it&apos;s not working, use{" "}
+            <a href={corporateBookingLink} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-cream/60 transition-colors">this enquiry form</a>
+            {" "}instead.
           </p>
 
           <button
@@ -367,18 +369,6 @@ export default function CorporateQuoteBuilder() {
         </form>
       </section>
 
-      {/* ── OR just use the form ── */}
-      <div className="mt-6 text-center">
-        <p className="text-sm text-cream/40">or</p>
-        <a
-          href={corporateBookingLink}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="mt-2 inline-flex items-center gap-1.5 text-sm text-cream/60 underline underline-offset-4 transition-colors hover:text-cream"
-        >
-          Use the enquiry form instead
-        </a>
-      </div>
 
     </div>
   );
