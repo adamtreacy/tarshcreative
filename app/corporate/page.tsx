@@ -48,14 +48,8 @@ export default function CorporatePage() {
           <p className="text-sm uppercase tracking-[0.28em] text-taupe">
             Tarsh Creative Corporate Events
           </p>
-          <p className="mt-3 text-xs text-cream/45 tracking-wide">
+          <p className="mt-4 font-display text-2xl font-light text-cream/85">
             {corporateEventTypes}
-          </p>
-          <p className="mt-5 text-balance text-lg leading-relaxed text-cream/75">
-            {corporateIntro}
-          </p>
-          <p className="mt-2 text-base text-cream/50">
-            {corporateSubIntro}
           </p>
         </header>
 

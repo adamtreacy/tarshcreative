@@ -20,6 +20,7 @@ const choices = [
     eyebrow: "For events",
     title: "Corporate Events",
     description: "Your team worked too hard to let it go unrecorded.",
+    sub: "For the socials, the board and the ATO.",
   },
 ] as const;
 
@@ -55,6 +56,9 @@ export default function Home() {
               <span className="mt-3 text-sm leading-relaxed text-cream/70">
                 {c.description}
               </span>
+              {"sub" in c && (
+                <span className="mt-1.5 text-sm text-cream/45">{c.sub}</span>
+              )}
               <span className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-cream">
                 View prices
                 <svg
