@@ -19,7 +19,7 @@ const choices = [
     href: "/corporate",
     eyebrow: "For events",
     title: "Corporate Events",
-    description: "Professional coverage for your next event.",
+    description: "Golf days · Award nights · Charity events · Corporate retreats",
   },
 ] as const;
 
