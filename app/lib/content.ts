@@ -191,8 +191,8 @@ export type RateItem = {
 };
 
 export const corporateBaseRates = [
-  { id: "half-day", name: "Half Day", duration: "up to 4 hours", price: "$600", value: 600, cadence: "+ GST" },
-  { id: "full-day", name: "Full Day", duration: "up to 8 hours", price: "$950", value: 950, cadence: "+ GST" },
+  { id: "half-day", name: "Half Day", duration: "up to 4 hours", price: "$700", value: 700, cadence: "+ GST" },
+  { id: "full-day", name: "Full Day", duration: "up to 8 hours", price: "$1,100", value: 1100, cadence: "+ GST" },
 ];
 
 export const corporateBaseIncludes = [
@@ -210,7 +210,7 @@ export const corporateEditing: RateItem[] = [
 
 export const corporateAddons: RateItem[] = [
   { id: "extra-hours", label: "Additional capture hours", price: "$200 / hr + GST", value: 200, qtySelectable: true, note: "Extra time on location beyond your booked session." },
-  { id: "second-shooter", label: "Second shooter", price: "$600 / $950 + GST", value: 0, note: "A second camera operator to capture more of the day." },
+  { id: "second-shooter", label: "Second shooter", price: "$700 / $1,100 + GST", value: 0, note: "A second camera operator to capture more of the day." },
   { id: "travel", label: "Extended travel", price: "$1 / km beyond 30km", value: 0, note: "For events beyond 30km from Darwin CBD." },
   { id: "urgent", label: "Urgent turnaround", price: "+25% of total", value: 0, note: "Content delivered within 72 hours of your event." },
 ];
