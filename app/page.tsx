@@ -19,8 +19,7 @@ const choices = [
     href: "/corporate",
     eyebrow: "For events",
     title: "Corporate Events",
-    description: "Your team worked too hard to let it go unrecorded.",
-    sub: "For the socials, the board and the ATO.",
+    description: "For the socials, the board and the ATO.",
   },
 ] as const;
 
