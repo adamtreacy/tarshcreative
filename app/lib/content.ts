@@ -191,7 +191,7 @@ export const corporateBaseRates = [
 
 export const corporateBaseIncludes = [
   "Pre-event planning call",
-  "Professional camera, lighting & audio kit",
+  "Professional camera & audio kit",
   "Travel within 30km of Darwin",
   "Raw footage library",
   "Additional hours at $200/hr + GST",
@@ -201,11 +201,10 @@ export const corporateEditing: RateItem[] = [
   { label: "Social media edit (under 60s)", price: "$150 / video + GST" },
   { label: "Social media edit (60–90s)", price: "$250 / video + GST" },
   { label: "Event highlight video (2–5 min)", price: "$1,150 + GST" },
-  { label: "Photo retouching", price: "$45 / image + GST", note: "or $300 for 10" },
 ];
 
 export const corporateAddons: RateItem[] = [
-  { label: "Second shooter", price: "$500–800 + GST" },
+  { label: "Second shooter", price: "$600 / $950 + GST", note: "half day / full day" },
   { label: "Branded captions / subtitles", price: "$50 / video + GST" },
   { label: "Licensed music track", price: "$45 / track + GST" },
   { label: "Extended travel", price: "$0.85 / km beyond 30km" },

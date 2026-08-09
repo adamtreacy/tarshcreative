@@ -54,7 +54,7 @@ export default function CorporatePage() {
         {/* Base Rates */}
         <section className="mx-auto mt-14 w-full max-w-3xl">
           <h2 className="text-center text-xs uppercase tracking-[0.28em] text-taupe/70 mb-6">
-            Base Rates
+            Content Capture
           </h2>
           <div className="grid gap-5 sm:grid-cols-2">
             {corporateBaseRates.map((rate) => (
