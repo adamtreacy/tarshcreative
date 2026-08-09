@@ -3,6 +3,7 @@ import Logo from "@/app/components/Logo";
 import {
   brand,
   corporateIntro,
+  corporateEventTypes,
   corporateBaseRates,
   corporateBaseIncludes,
   corporateEditing,
@@ -45,6 +46,9 @@ export default function CorporatePage() {
         <header className="mx-auto mt-12 max-w-2xl text-center">
           <p className="text-sm uppercase tracking-[0.28em] text-taupe">
             Tarsh Creative Corporate Events
+          </p>
+          <p className="mt-3 text-xs text-cream/45 tracking-wide">
+            {corporateEventTypes}
           </p>
           <p className="mt-5 text-balance text-lg leading-relaxed text-cream/75">
             {corporateIntro}

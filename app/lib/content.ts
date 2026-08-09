@@ -175,8 +175,10 @@ export const subscriptionPackages: Package[] = [
 
 // ─── Corporate Events ───────────────────────────────────────────────────────
 
-export const corporateIntro =
-  "Professional content coverage for events of any scale. Every rate listed. No surprises.";
+export const corporateEventTypes =
+  "Golf days · Award nights · Charity events · Corporate retreats";
+
+export const corporateIntro = "The event ends. The content doesn't.";
 
 export type RateItem = {
   label: string;
