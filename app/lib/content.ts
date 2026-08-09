@@ -179,6 +179,7 @@ export const corporateEventTypes =
   "Golf days · Award nights · Charity events · Corporate retreats";
 
 export const corporateIntro = "The event ends. The content doesn't.";
+export const corporateSubIntro = "For the socials, the board and the ATO.";
 
 export type RateItem = {
   label: string;

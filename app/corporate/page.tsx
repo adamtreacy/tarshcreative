@@ -3,6 +3,7 @@ import Logo from "@/app/components/Logo";
 import {
   brand,
   corporateIntro,
+  corporateSubIntro,
   corporateEventTypes,
   corporateBaseRates,
   corporateBaseIncludes,
@@ -52,6 +53,9 @@ export default function CorporatePage() {
           </p>
           <p className="mt-5 text-balance text-lg leading-relaxed text-cream/75">
             {corporateIntro}
+          </p>
+          <p className="mt-2 text-base text-cream/50">
+            {corporateSubIntro}
           </p>
         </header>
 
