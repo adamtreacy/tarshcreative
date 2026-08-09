@@ -15,6 +15,12 @@ const choices = [
     title: "Business Content",
     description: "Make your brand impossible to scroll past.",
   },
+  {
+    href: "/corporate",
+    eyebrow: "For events",
+    title: "Corporate Events",
+    description: "Professional coverage for your next event, priced transparently.",
+  },
 ] as const;
 
 export default function Home() {
@@ -33,7 +39,7 @@ export default function Home() {
         </div>
 
         {/* The two choices */}
-        <div className="mt-8 grid w-full max-w-3xl gap-5 sm:grid-cols-2">
+        <div className="mt-8 grid w-full max-w-5xl gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {choices.map((c) => (
             <Link
               key={c.href}

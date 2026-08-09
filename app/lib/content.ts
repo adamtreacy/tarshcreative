@@ -173,6 +173,49 @@ export const subscriptionPackages: Package[] = [
   },
 ];
 
+// ─── Corporate Events ───────────────────────────────────────────────────────
+
+export const corporateIntro =
+  "Professional content coverage for events of any scale. Every rate listed. No surprises.";
+
+export type RateItem = {
+  label: string;
+  price: string;
+  note?: string;
+};
+
+export const corporateBaseRates = [
+  { name: "Half Day", duration: "up to 4 hours", price: "$600", cadence: "+ GST" },
+  { name: "Full Day", duration: "up to 8 hours", price: "$950", cadence: "+ GST" },
+];
+
+export const corporateBaseIncludes = [
+  "Pre-event planning call",
+  "Professional camera, lighting & audio kit",
+  "Travel within 30km of Darwin",
+  "Raw footage library",
+  "Additional hours at $200/hr + GST",
+];
+
+export const corporateEditing: RateItem[] = [
+  { label: "Social media edit (under 60s)", price: "$150 / video + GST" },
+  { label: "Social media edit (60–90s)", price: "$250 / video + GST" },
+  { label: "Event highlight video (2–5 min)", price: "$1,150 + GST" },
+  { label: "Photo retouching", price: "$45 / image + GST", note: "or $300 for 10" },
+];
+
+export const corporateAddons: RateItem[] = [
+  { label: "Second shooter", price: "$500–800 + GST" },
+  { label: "Branded captions / subtitles", price: "$50 / video + GST" },
+  { label: "Licensed music track", price: "$45 / track + GST" },
+  { label: "Extended travel", price: "$0.85 / km beyond 30km" },
+  { label: "Urgent turnaround (under 72 hrs)", price: "+25% of total" },
+];
+
+export const corporateBookingLink = "https://forms.gle/G7LcuPKJcXAmYr4i7";
+
+// ─── Business Packages ──────────────────────────────────────────────────────
+
 export const businessPackages: Package[] = [
   {
     name: "Package One",
