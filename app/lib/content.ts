@@ -182,14 +182,17 @@ export const corporateIntro = "The event ends. The content doesn't.";
 export const corporateSubIntro = "For the socials, the board and the ATO.";
 
 export type RateItem = {
+  id: string;
   label: string;
   price: string;
+  value: number;       // numeric for calculation; 0 = dynamic or percentage
+  qtySelectable?: boolean;
   note?: string;
 };
 
 export const corporateBaseRates = [
-  { name: "Half Day", duration: "up to 4 hours", price: "$600", cadence: "+ GST" },
-  { name: "Full Day", duration: "up to 8 hours", price: "$950", cadence: "+ GST" },
+  { id: "half-day", name: "Half Day", duration: "up to 4 hours", price: "$600", value: 600, cadence: "+ GST" },
+  { id: "full-day", name: "Full Day", duration: "up to 8 hours", price: "$950", value: 950, cadence: "+ GST" },
 ];
 
 export const corporateBaseIncludes = [
@@ -199,17 +202,17 @@ export const corporateBaseIncludes = [
 ];
 
 export const corporateEditing: RateItem[] = [
-  { label: "Social media edit (under 60s)", price: "$250 / video + GST" },
-  { label: "Social media edit (60–90s)", price: "$350 / video + GST" },
-  { label: "Event highlight video (2–5 min)", price: "$1,050 + GST" },
-  { label: "Footage library", price: "$500 + GST", note: "A curated library of the day's best footage, unedited and ready to use." },
+  { id: "social-60", label: "Social media edit (under 60s)", price: "$250 / video + GST", value: 250, qtySelectable: true },
+  { id: "social-90", label: "Social media edit (60–90s)", price: "$350 / video + GST", value: 350, qtySelectable: true },
+  { id: "highlight", label: "Event highlight video (2–5 min)", price: "$1,050 + GST", value: 1050 },
+  { id: "footage", label: "Footage library", price: "$500 + GST", value: 500, note: "A curated library of the day's best footage, unedited and ready to use." },
 ];
 
 export const corporateAddons: RateItem[] = [
-  { label: "Additional capture hours", price: "$200 / hr + GST" },
-  { label: "Second shooter", price: "$600 / $950 + GST", note: "half day / full day" },
-  { label: "Extended travel", price: "$1 / km beyond 30km" },
-  { label: "Urgent turnaround (under 72 hrs)", price: "+25% of total" },
+  { id: "extra-hours", label: "Additional capture hours", price: "$200 / hr + GST", value: 200, qtySelectable: true },
+  { id: "second-shooter", label: "Second shooter", price: "Matches your base rate", value: 0 },
+  { id: "travel", label: "Extended travel", price: "$1 / km beyond 30km", value: 0 },
+  { id: "urgent", label: "Urgent turnaround (under 72 hrs)", price: "+25% of total", value: 0 },
 ];
 
 export const corporateBookingLink = "https://forms.gle/EEzthxACjLroNHxu9";
