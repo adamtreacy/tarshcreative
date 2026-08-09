@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, type FormEvent } from "react";
 import {
   brand,
   corporateBaseRates,
@@ -90,7 +90,7 @@ export default function CorporateQuoteBuilder() {
     return lines.join("\n");
   }
 
-  function handleSubmit(e: React.FormEvent) {
+  function handleSubmit(e: FormEvent) {
     e.preventDefault();
     const subject = encodeURIComponent("Corporate Events Enquiry — Tarsh Creative");
     const summary = buildSummary();
