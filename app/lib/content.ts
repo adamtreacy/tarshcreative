@@ -197,7 +197,6 @@ export const corporateBaseIncludes = [
   "Professional camera & audio kit",
   "Travel within 30km of Darwin",
   "Raw footage library",
-  "Additional hours at $200/hr + GST",
 ];
 
 export const corporateEditing: RateItem[] = [
@@ -207,10 +206,9 @@ export const corporateEditing: RateItem[] = [
 ];
 
 export const corporateAddons: RateItem[] = [
+  { label: "Additional capture hours", price: "$200 / hr + GST" },
   { label: "Second shooter", price: "$600 / $950 + GST", note: "half day / full day" },
-  { label: "Branded captions / subtitles", price: "$50 / video + GST" },
-  { label: "Licensed music track", price: "$45 / track + GST" },
-  { label: "Extended travel", price: "$0.85 / km beyond 30km" },
+  { label: "Extended travel", price: "$1 / km beyond 30km" },
   { label: "Urgent turnaround (under 72 hrs)", price: "+25% of total" },
 ];
 
