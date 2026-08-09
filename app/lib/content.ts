@@ -212,7 +212,7 @@ export const corporateAddons: RateItem[] = [
   { label: "Urgent turnaround (under 72 hrs)", price: "+25% of total" },
 ];
 
-export const corporateBookingLink = "https://forms.gle/G7LcuPKJcXAmYr4i7";
+export const corporateBookingLink = "https://forms.gle/EEzthxACjLroNHxu9";
 
 // ─── Business Packages ──────────────────────────────────────────────────────
 
