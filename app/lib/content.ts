@@ -204,7 +204,7 @@ export const corporateBaseIncludes = [
 export const corporateEditing: RateItem[] = [
   { id: "social-60", label: "Social media edit (under 60s)", price: "$250 / video + GST", value: 250, qtySelectable: true },
   { id: "social-90", label: "Social media edit (60–90s)", price: "$350 / video + GST", value: 350, qtySelectable: true },
-  { id: "highlight", label: "Event highlight video (2–5 min)", price: "$1,050 + GST", value: 1050 },
+  { id: "highlight", label: "Long form video (2–5 min)", price: "$1,050 + GST", value: 1050, qtySelectable: true, note: "Event highlights, speeches and other standout moments." },
   { id: "footage", label: "Footage library", price: "$500 + GST", value: 500, note: "A curated library of the day's best footage, unedited and ready to use." },
 ];
 
