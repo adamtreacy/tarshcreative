@@ -80,6 +80,7 @@ export const weddingPackages: Package[] = [
       "Highlight video of the entire day (within 48 hrs)",
       "4x moment reels",
       "Second shooter",
+      "Drone footage",
       "Camcorder footage and camcorder",
       "Polaroid camera and film for the wedding and events",
       "All raw footage",
