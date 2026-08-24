@@ -30,7 +30,7 @@ export const weddingIntro =
   "Relive the moments that you can't plan for.";
 
 export const weddingNotes = [
-  "Additional coverage available at $120/hr incl. GST",
+  "Additional coverage available at $150/hr incl. GST",
   "Travel fees may apply",
 ];
 
