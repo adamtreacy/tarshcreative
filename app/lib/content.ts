@@ -30,7 +30,7 @@ export const weddingIntro =
   "Relive the moments that you can't plan for.";
 
 export const weddingNotes = [
-  "Additional coverage available at $120/hr + GST",
+  "Additional coverage available at $120/hr incl. GST",
   "Travel fees may apply",
 ];
 
@@ -40,7 +40,7 @@ export const weddingPackages: Package[] = [
   {
     name: "Package One",
     price: "$1,697",
-    cadence: "+ GST",
+    cadence: "incl. GST",
     description: "Up to 5 hours coverage",
     features: [
       "Pre wedding consultation",
@@ -52,7 +52,7 @@ export const weddingPackages: Package[] = [
   {
     name: "Package Two",
     price: "$2,997",
-    cadence: "+ GST",
+    cadence: "incl. GST",
     description: "Full day coverage",
     features: [
       "Pre wedding consultation",
@@ -69,7 +69,7 @@ export const weddingPackages: Package[] = [
   {
     name: "Package Three",
     price: "$5,997",
-    cadence: "+ GST",
+    cadence: "incl. GST",
     description: "Full day coverage",
     features: [
       "Pre wedding consultation",
