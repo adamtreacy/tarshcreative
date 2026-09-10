@@ -8,6 +8,7 @@ const choices = [
     eyebrow: "For couples",
     title: "Wedding Content",
     description: "Relive the feeling, not just the timeline.",
+    cta: "See the work",
   },
   {
     href: "/business",
@@ -56,7 +57,7 @@ export default function Home() {
                 {c.description}
               </span>
               <span className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-cream">
-                View prices
+                {"cta" in c ? c.cta : "View prices"}
                 <svg
                   width="16"
                   height="16"

@@ -39,3 +39,19 @@ body {
 .tracking-wordmark {
   letter-spacing: 0.38em;
 }
+
+/* The wedding page runs on paper rather than the brand blue.
+   The wrapper div carries .wedding-light so the page background,
+   including overscroll, switches with it. */
+body:has(.wedding-light) {
+  background: #fbf9f5;
+  color: #29333a;
+}
+
+/* FAQ rows use native details/summary, without the browser arrow */
+summary::-webkit-details-marker {
+  display: none;
+}
+summary {
+  list-style: none;
+}
