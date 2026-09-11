@@ -160,21 +160,22 @@ export const work = {
 };
 
 // ─── Kind words ──────────────────────────────────────────────────────────────
-// PLACEHOLDER TEXT. Paste real quotes from real couples over the top of these,
-// or delete the entries and the whole section disappears from the page.
+// Real words from real couples. Quote them exactly: cut whole sentences to
+// keep them short, never reword what somebody said. Two sits cleanly in the
+// two column layout; a third wraps onto its own row.
 
 export type Testimonial = { quote: string; couple: string };
 
 export const testimonials: Testimonial[] = [
   {
     quote:
-      "Placeholder quote. Paste a real one from a couple here, ideally the bit where they say how the day felt rather than how the video looked.",
-    couple: "Placeholder, replace with real names",
+      "It was exactly what I was hoping for... and so much more. You somehow managed to bottle up all the love, laughter, and little in-between moments that made the day so special. From the way you included the kids, and attention to detail, you nailed it.",
+    couple: "Mr & Mrs Elder",
   },
   {
     quote:
-      "Placeholder quote. Two or three of these is plenty, and short ones read better than long ones.",
-    couple: "Placeholder, replace with real names",
+      "It was an absolute privilege and joy to have you shooting our wedding - you brought the BEST vibes and we had so many people complimenting you on the night. This highlight video is EPIC!!!! I can't believe that's our wedding?!?!!?",
+    couple: "Harriet",
   },
 ];
 
