@@ -20,8 +20,9 @@ import {
 } from "@/app/lib/wedding";
 
 export const metadata: Metadata = {
-  // Absolute, so the landing page is not titled "Wedding Content |Tarsh Creative"
-  title: { absolute: "Tarsh Creative |Wedding Content, Darwin" },
+  // Absolute, so the landing page keeps the site title rather than becoming
+  // "Wedding Content |Tarsh Creative" through the layout's title template.
+  title: { absolute: "Tarsh Creative |Wedding & Business Content" },
   description:
     "Vertical wedding films and content, shot on professional cameras and delivered within days. Darwin based, servicing Australia wide.",
   alternates: { canonical: "/" },
