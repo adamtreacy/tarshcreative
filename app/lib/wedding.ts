@@ -100,7 +100,7 @@ export const about = {
     "Outside of weddings, you'll usually find me with my family, outdoors somewhere, probably barefoot, and happiest when life feels simple.",
   ],
   signoff: "See you on the dance floor",
-  media: { file: "tarsh.jpg", kind: "image", alt: "Tarsh filming at a wedding", label: "A photo of you working at a wedding" } as MediaSlot,
+  media: { file: "tarsh.jpg", kind: "image", alt: "Tarsh at a wedding reception with her camera", label: "A photo of you working at a wedding" } as MediaSlot,
 };
 
 // ─── What you actually get ───────────────────────────────────────────────────
