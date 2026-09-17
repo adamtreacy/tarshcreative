@@ -31,8 +31,8 @@ export type MediaSlot = {
 export const heroClips: MediaSlot[] = [
   { file: "hero1.mp4", kind: "video", poster: "hero1.jpg", alt: "Wedding morning details", label: "Details and getting ready" },
   { file: "hero2.mp4", kind: "video", poster: "hero2.jpg", alt: "An emotional moment during the ceremony", label: "Ceremony emotion" },
-  { file: "hero3.mp4", kind: "video", poster: "hero3.jpg", alt: "The couple together after the ceremony", label: "The couple" },
   { file: "hero4.mp4", kind: "video", poster: "hero4.jpg", alt: "Champagne and celebrating", label: "Champagne" },
+  { file: "hero3.mp4", kind: "video", poster: "hero3.jpg", alt: "The couple together after the ceremony", label: "The couple" },
   { file: "hero5.mp4", kind: "video", poster: "hero5.jpg", alt: "The dance floor at night", label: "Dance floor" },
 ];
 
@@ -153,8 +153,8 @@ export const work = {
     { file: "work1.mp4", kind: "video", poster: "work1.jpg", alt: "Wedding reel", label: "Reel 1" },
     { file: "work2.mp4", kind: "video", poster: "work2.jpg", alt: "Wedding reel", label: "Reel 2" },
     { file: "work3.mp4", kind: "video", poster: "work3.jpg", alt: "Wedding reel", label: "Reel 3" },
-    { file: "work4.mp4", kind: "video", poster: "work4.jpg", alt: "Wedding reel", label: "Reel 4" },
     { file: "work5.mp4", kind: "video", poster: "work5.jpg", alt: "Wedding reel", label: "Reel 5" },
+    { file: "work4.mp4", kind: "video", poster: "work4.jpg", alt: "Wedding reel", label: "Reel 4" },
     { file: "work6.mp4", kind: "video", poster: "work6.jpg", alt: "Wedding reel", label: "Reel 6" },
   ] as MediaSlot[],
 };
