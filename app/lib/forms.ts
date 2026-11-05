@@ -15,11 +15,13 @@ export type Field = {
   /** Site wording to the exact option text the Google Form expects */
   googleMap?: Record<string, string>;
   placeholder?: string;
-  /** Google Forms entry id, e.g. "164903274" */
-  entry: string;
+  /** Google Forms entry id, e.g. "164903274". Not needed when `into` is set. */
+  entry?: string;
+  /** Instead of its own Google column, fold this answer into another field's text ("Label: answer") */
+  into?: string;
 };
 
-export type FormKind = "general" | "wedding" | "business" | "corporate";
+export type FormKind = "general" | "wedding" | "business" | "corporate" | "subscription";
 
 export type FormDef = {
   kind: FormKind;
@@ -28,6 +30,8 @@ export type FormDef = {
   intro: string;
   googleFormId: string;
   submitLabel: string;
+  /** Fixed answers always sent with this form (Google entry id to value) */
+  constants?: { entry: string; value: string }[];
   fields: Field[];
 };
 
@@ -126,6 +130,42 @@ export const forms: Record<FormKind, FormDef> = {
       { name: "where", label: "Where is your business?", kind: "text", required: true, entry: "41156978" },
       ...contact,
       { name: "questions", label: "Any further questions?", kind: "textarea", entry: "1000023" },
+    ],
+  },
+
+  // Saves into the same general Google Form as before: the plan, length and
+  // business details are folded into its "tell me about yourself" column.
+  subscription: {
+    kind: "subscription",
+    eyebrow: "Subscription enquiry",
+    title: "Monthly content",
+    intro: "Pick a plan and I'll be in touch to set it up. No payment is taken here.",
+    googleFormId: "1FAIpQLScAecd56SOUJJgDe4yoUvqbsS5Jrg5C8N90qB5o_EgM8wJf3Q",
+    submitLabel: "Send enquiry",
+    constants: [{ entry: "164903274", value: "Business Content" }],
+    fields: [
+      {
+        name: "package",
+        label: "Which subscription?",
+        kind: "radio",
+        required: true,
+        options: ["Self-Edit", "Growth", "Pro", "Agency"],
+        into: "about",
+      },
+      {
+        name: "commitment",
+        label: "How long would you like to commit?",
+        kind: "radio",
+        options: ["2 months (minimum)", "4 months (10% off)", "6 months (20% off)", "Not sure yet"],
+        into: "about",
+      },
+      { name: "business", label: "Business name", kind: "text", required: true, into: "about" },
+      { name: "where", label: "Where is your business?", kind: "text", into: "about" },
+      { name: "name", label: "Your name", kind: "text", required: true, into: "about" },
+      { name: "instagram", label: "Instagram handle", kind: "text", required: true, placeholder: "@yourhandle", entry: "768829893" },
+      { name: "email", label: "Email address", kind: "email", required: true, entry: "977141807" },
+      { name: "phone", label: "Best contact number", kind: "tel", entry: "721487384" },
+      { name: "about", label: "Anything else we should know?", kind: "textarea", entry: "1314216092" },
     ],
   },
 

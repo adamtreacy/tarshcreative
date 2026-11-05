@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { forms, type FormKind, type Field } from "@/app/lib/forms";
+import { subscriptionPackages } from "@/app/lib/content";
 
 const input =
   "w-full rounded-xl border border-white/15 bg-white/5 px-4 py-3 text-sm text-cream placeholder:text-cream/30 focus:border-taupe/60 focus:outline-none focus:ring-0";
@@ -17,6 +18,7 @@ type Props = {
 const choices: { kind: FormKind; label: string }[] = [
   { kind: "wedding", label: "A wedding" },
   { kind: "business", label: "My business" },
+  { kind: "subscription", label: "A monthly subscription" },
   { kind: "corporate", label: "A corporate event" },
   { kind: "general", label: "Something else" },
 ];
@@ -26,6 +28,8 @@ export default function EnquiryForm({ initialKind, preset = {} }: Props) {
   const [state, setState] = useState<"idle" | "sending" | "done">("idle");
   const [error, setError] = useState("");
   const def = kind ? forms[kind] : null;
+  const [plan, setPlan] = useState(initialKind === "subscription" ? (preset.package ?? "") : "");
+  const chosenPlan = subscriptionPackages.find((p) => p.name === plan);
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -69,7 +73,13 @@ export default function EnquiryForm({ initialKind, preset = {} }: Props) {
   }
 
   return (
-    <form onSubmit={onSubmit} className="space-y-7 rounded-2xl border border-white/15 bg-white/10 p-6 sm:p-10">
+    <form
+      onSubmit={onSubmit}
+      onChange={(e) => {
+        const t = e.target as unknown as HTMLInputElement;
+        if (t.name === "package") setPlan(t.value);
+      }}
+      className="space-y-7 rounded-2xl border border-white/15 bg-white/10 p-6 sm:p-10">
       <fieldset>
         <legend>
           <span className={label}>
@@ -102,7 +112,15 @@ export default function EnquiryForm({ initialKind, preset = {} }: Props) {
         <div key={kind} className="space-y-7">
           <p className="text-sm leading-relaxed text-cream/65">{def.intro}</p>
           {def.fields.map((f) => (
-            <FieldInput key={f.name} f={f} defaultValue={kind === initialKind ? preset[f.name] : undefined} />
+            <div key={f.name} className="space-y-7">
+              <FieldInput f={f} defaultValue={kind === initialKind ? preset[f.name] : undefined} />
+              {kind === "subscription" && f.name === "package" && chosenPlan && (
+                <p className="-mt-3 text-sm text-cream/70">
+                  <span className="font-display text-xl text-cream">{chosenPlan.price}</span> {chosenPlan.cadence}
+                  <span className="mt-1 block text-cream/55">{chosenPlan.description}</span>
+                </p>
+              )}
+            </div>
           ))}
         </div>
       )}

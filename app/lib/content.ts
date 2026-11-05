@@ -118,7 +118,7 @@ export const subscriptionPackages: Package[] = [
       "Private link to all captured content",
       "Yours to use freely",
     ],
-    bookingLink: enquireHref("general", undefined, "I'm interested in the Self-Edit subscription"),
+    bookingLink: enquireHref("subscription", "Self-Edit"),
   },
   {
     name: "Growth",
@@ -130,7 +130,7 @@ export const subscriptionPackages: Package[] = [
       "8x edited content pieces per month",
       "Private link to all captured content",
     ],
-    bookingLink: enquireHref("general", undefined, "I'm interested in the Growth subscription"),
+    bookingLink: enquireHref("subscription", "Growth"),
   },
   {
     name: "Pro",
@@ -144,7 +144,7 @@ export const subscriptionPackages: Package[] = [
       "Private link to all captured content",
     ],
     featured: true,
-    bookingLink: enquireHref("general", undefined, "I'm interested in the Pro subscription"),
+    bookingLink: enquireHref("subscription", "Pro"),
   },
   {
     name: "Agency",
@@ -159,7 +159,7 @@ export const subscriptionPackages: Package[] = [
       "Priority turnaround",
       "Private link to all captured content",
     ],
-    bookingLink: enquireHref("general", undefined, "I'm interested in the Agency subscription"),
+    bookingLink: enquireHref("subscription", "Agency"),
   },
 ];
 

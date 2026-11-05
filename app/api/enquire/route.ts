@@ -39,6 +39,8 @@ export async function POST(request: Request) {
 
   const params = new URLSearchParams();
   const summary: string[] = [];
+  const folded: Record<string, string[]> = {};
+  const given: Record<string, string> = {};
 
   for (const f of def.fields) {
     const vals = values(f, answers[f.name]);
@@ -50,21 +52,37 @@ export async function POST(request: Request) {
     }
     if (vals.length === 0) continue;
 
-    if (f.kind === "date") {
+    if (f.into) {
+      (folded[f.into] ??= []).push(`${f.label}: ${vals.join(", ")}`);
+      summary.push(`${f.label}: ${vals.join(", ")}`);
+    } else if (f.kind === "date") {
       const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(vals[0]);
       if (!m) return Response.json({ error: `Please enter a valid date for: ${f.label}` }, { status: 422 });
       params.set(`entry.${f.entry}_year`, m[1]);
       params.set(`entry.${f.entry}_month`, String(Number(m[2])));
       params.set(`entry.${f.entry}_day`, String(Number(m[3])));
       summary.push(`${f.label}: ${m[3]}/${m[2]}/${m[1]}`);
+    } else if (f.name in folded || def.fields.some((x) => x.into === f.name)) {
+      // Target of folded answers: written below with the folded lines in front
+      given[f.name] = vals.join(", ");
     } else {
       for (const v of vals) params.append(`entry.${f.entry}`, v);
       summary.push(`${f.label}: ${vals.join(", ")}`);
     }
   }
 
+  // Write each folded block into its target field, ahead of anything typed there
+  for (const [target, lines] of Object.entries(folded)) {
+    const tf = def.fields.find((x) => x.name === target);
+    if (!tf?.entry) continue;
+    const text = [...lines, ...(given[target] ? ["", given[target]] : [])].join("\n");
+    params.set(`entry.${tf.entry}`, text);
+    if (given[target]) summary.push(`${tf.label}: ${given[target]}`);
+  }
+  for (const c of def.constants ?? []) params.append(`entry.${c.entry}`, c.value);
+
   if (!live) {
-    console.log(`[enquire:dev] not sent (${def.kind})\n${summary.join("\n")}`);
+    console.log(`[enquire:dev] not sent (${def.kind})\n${summary.join("\n")}\nGOOGLE:${JSON.stringify([...params.entries()])}`);
     return Response.json({ ok: true, dev: true });
   }
 
