@@ -110,7 +110,7 @@ export const subscriptionNotes = [
 export const subscriptionPackages: Package[] = [
   {
     name: "Self-Edit",
-    price: "$500",
+    price: "$900",
     cadence: "/ month + GST",
     description: "High-quality content to use and curate yourself.",
     features: [
@@ -122,7 +122,7 @@ export const subscriptionPackages: Package[] = [
   },
   {
     name: "Growth",
-    price: "$1,500",
+    price: "$1,900",
     cadence: "/ month + GST",
     description: "For businesses ready to grow their social media presence.",
     features: [
@@ -134,7 +134,7 @@ export const subscriptionPackages: Package[] = [
   },
   {
     name: "Pro",
-    price: "$2,500",
+    price: "$2,900",
     cadence: "/ month + GST",
     description: "Every post professionally edited and curated for your brand.",
     features: [
@@ -148,7 +148,7 @@ export const subscriptionPackages: Package[] = [
   },
   {
     name: "Agency",
-    price: "$4,500",
+    price: "$4,900",
     cadence: "/ month + GST",
     description: "Full-scale content production for brands that never stop posting.",
     features: [
