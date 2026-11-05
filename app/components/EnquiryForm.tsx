@@ -8,18 +8,28 @@ const input =
 const label = "mb-2 block text-xs uppercase tracking-[0.2em] text-taupe/80";
 
 type Props = {
-  kind: FormKind;
-  /** Pre-selected option for the "package" field, if the visitor came from a package button */
+  /** Which version to open on, if the visitor came from a package button */
+  initialKind: FormKind | null;
+  /** Pre-filled answers (package, note), applied to the version the visitor arrived on */
   preset?: Record<string, string>;
 };
 
-export default function EnquiryForm({ kind, preset = {} }: Props) {
-  const def = forms[kind];
+const choices: { kind: FormKind; label: string }[] = [
+  { kind: "wedding", label: "A wedding" },
+  { kind: "business", label: "My business" },
+  { kind: "corporate", label: "A corporate event" },
+  { kind: "general", label: "Something else" },
+];
+
+export default function EnquiryForm({ initialKind, preset = {} }: Props) {
+  const [kind, setKind] = useState<FormKind | null>(initialKind);
   const [state, setState] = useState<"idle" | "sending" | "done">("idle");
   const [error, setError] = useState("");
+  const def = kind ? forms[kind] : null;
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    if (!kind || !def) return;
     setError("");
     const fd = new FormData(e.currentTarget);
     const answers: Record<string, string | string[]> = {};
@@ -60,9 +70,42 @@ export default function EnquiryForm({ kind, preset = {} }: Props) {
 
   return (
     <form onSubmit={onSubmit} className="space-y-7 rounded-2xl border border-white/15 bg-white/10 p-6 sm:p-10">
-      {def.fields.map((f) => (
-        <FieldInput key={f.name} f={f} defaultValue={preset[f.name]} />
-      ))}
+      <fieldset>
+        <legend>
+          <span className={label}>
+            What&apos;s this enquiry about? <span className="text-cream/50">*</span>
+          </span>
+        </legend>
+        <div className="flex flex-wrap gap-3">
+          {choices.map((c) => (
+            <button
+              key={c.kind}
+              type="button"
+              aria-pressed={kind === c.kind}
+              onClick={() => {
+                setKind(c.kind);
+                setError("");
+              }}
+              className={`rounded-full border px-5 py-2.5 text-sm transition-colors ${
+                kind === c.kind
+                  ? "border-cream bg-cream text-[#214960]"
+                  : "border-white/20 text-cream/80 hover:border-white/40"
+              }`}
+            >
+              {c.label}
+            </button>
+          ))}
+        </div>
+      </fieldset>
+
+      {def && kind && (
+        <div key={kind} className="space-y-7">
+          <p className="text-sm leading-relaxed text-cream/65">{def.intro}</p>
+          {def.fields.map((f) => (
+            <FieldInput key={f.name} f={f} defaultValue={kind === initialKind ? preset[f.name] : undefined} />
+          ))}
+        </div>
+      )}
 
       {/* Honeypot, hidden from people */}
       <div aria-hidden className="absolute -left-[9999px] h-0 w-0 overflow-hidden">
@@ -80,10 +123,10 @@ export default function EnquiryForm({ kind, preset = {} }: Props) {
 
       <button
         type="submit"
-        disabled={state === "sending"}
+        disabled={state === "sending" || !def}
         className="inline-flex w-full items-center justify-center rounded-full bg-cream px-8 py-4 text-[0.68rem] uppercase tracking-[0.24em] text-[#214960] transition-colors hover:bg-sand disabled:opacity-60"
       >
-        {state === "sending" ? "Sending…" : def.submitLabel}
+        {state === "sending" ? "Sending…" : "Send enquiry"}
       </button>
     </form>
   );

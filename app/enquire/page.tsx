@@ -14,8 +14,8 @@ type Search = { type?: string; package?: string; note?: string };
 
 export default async function EnquirePage({ searchParams }: { searchParams: Promise<Search> }) {
   const sp = await searchParams;
-  const kind = isFormKind(sp.type) ? sp.type : "general";
-  const def = forms[kind];
+  const kind = isFormKind(sp.type) ? sp.type : null;
+  const def = forms[kind ?? "general"];
 
   // Carry a chosen package (or plan) into the form
   const preset: Record<string, string> = {};
@@ -46,13 +46,15 @@ export default async function EnquirePage({ searchParams }: { searchParams: Prom
         </div>
 
         <header className="mx-auto mt-12 max-w-2xl text-center">
-          <p className="text-sm uppercase tracking-[0.28em] text-taupe">{def.eyebrow}</p>
-          <h1 className="mt-5 text-balance font-display text-4xl font-light text-cream sm:text-5xl">{def.title}</h1>
-          <p className="mt-5 text-balance text-lg leading-relaxed text-cream/75">{def.intro}</p>
+          <p className="text-sm uppercase tracking-[0.28em] text-taupe">Enquire</p>
+          <h1 className="mt-5 text-balance font-display text-4xl font-light text-cream sm:text-5xl">Let&apos;s work together</h1>
+          <p className="mt-5 text-balance text-lg leading-relaxed text-cream/75">
+            Tell me a little about what you&apos;re after. No pressure, no essay required. I&apos;ll be in touch within 48 hours.
+          </p>
         </header>
 
         <section className="mx-auto mt-12 w-full max-w-2xl">
-          <EnquiryForm key={kind + (sp.package ?? "") + (sp.note ?? "")} kind={kind} preset={preset} />
+          <EnquiryForm key={(kind ?? "") + (sp.package ?? "") + (sp.note ?? "")} initialKind={kind} preset={preset} />
         </section>
       </main>
 
