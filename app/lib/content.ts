@@ -14,7 +14,7 @@ export const brand = {
     "Scroll stopping social media content for weddings and brands, captured on professional equipment and videoed to feel like you.",
   instagram: "https://instagram.com/tarshcreative",
   instagramHandle: "@tarshcreative",
-  email: "tarshcreative@ga-productions.com",
+  email: "tarsh@tarshcreative.com",
   bookingLink: "/enquire",
 };
 

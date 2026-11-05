@@ -112,7 +112,7 @@ export async function POST(request: Request) {
         headers: { Authorization: `Bearer ${key}`, "Content-Type": "application/json" },
         body: JSON.stringify({
           from: process.env.ENQUIRE_FROM ?? "Tarsh Creative <onboarding@resend.dev>",
-          to: (process.env.ENQUIRE_TO ?? "tarshcreative@ga-productions.com").split(",").map((s) => s.trim()),
+          to: (process.env.ENQUIRE_TO ?? "tarsh@tarshcreative.com").split(",").map((s) => s.trim()),
           ...(replyTo ? { reply_to: replyTo } : {}),
           subject: `New ${def.kind} enquiry`,
           text: summary.join("\n"),
