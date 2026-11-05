@@ -57,8 +57,6 @@ export default function WeddingPackages({
 
               <a
                 href={pkg.bookingLink ?? brand.bookingLink}
-                target="_blank"
-                rel="noopener noreferrer"
                 className={`mt-10 inline-flex items-center justify-center rounded-full px-7 py-3.5 text-xs uppercase tracking-[0.22em] transition-colors ${
                   pkg.featured
                     ? "bg-ink text-[#FBF9F5] hover:bg-[#214960]"

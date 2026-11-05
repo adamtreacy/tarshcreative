@@ -4,6 +4,8 @@
 //  Prices below are PLACEHOLDERS — swap in the real numbers.
 // ─────────────────────────────────────────────────────────────
 
+import { enquireHref } from "@/app/lib/forms";
+
 export const brand = {
   name: "Tarsh Creative",
   tagline: "Wedding & Business Content",
@@ -13,7 +15,7 @@ export const brand = {
   instagram: "https://instagram.com/tarshcreative",
   instagramHandle: "@tarshcreative",
   email: "tarshcreative@ga-productions.com",
-  bookingLink: "https://forms.gle/G7LcuPKJcXAmYr4i7",
+  bookingLink: "/enquire",
 };
 
 export type Package = {
@@ -34,7 +36,6 @@ export const weddingNotes = [
   "Travel fees may apply",
 ];
 
-const weddingBookingLink = "https://docs.google.com/forms/d/e/1FAIpQLSeU85Pj5vrdqJBrp0XUMnv-d6ndJCb3VchHMmqv9MorPFTfwQ/viewform?usp=publish-editor";
 
 export const weddingPackages: Package[] = [
   {
@@ -47,7 +48,7 @@ export const weddingPackages: Package[] = [
       "1x 15 to 30 second highlight video (within 24 hrs)",
       "1x 30 to 60 second ceremony video (within 72 hrs)",
     ],
-    bookingLink: weddingBookingLink,
+    bookingLink: enquireHref("wedding", "Package One"),
   },
   {
     name: "Package Two",
@@ -64,7 +65,7 @@ export const weddingPackages: Package[] = [
       "Camcorder footage and camcorder",
     ],
     featured: true,
-    bookingLink: weddingBookingLink,
+    bookingLink: enquireHref("wedding", "Package Two"),
   },
   {
     name: "Package Three",
@@ -85,7 +86,7 @@ export const weddingPackages: Package[] = [
       "Polaroid camera and film for the wedding and events",
       "All raw footage",
     ],
-    bookingLink: weddingBookingLink,
+    bookingLink: enquireHref("wedding", "Package Three"),
   },
 ];
 
@@ -96,7 +97,6 @@ export const businessNotes = [
   "Need something different? Custom packages and add-ons available",
 ];
 
-const businessBookingLink = "https://docs.google.com/forms/d/e/1FAIpQLSfxridE62y8vkWreixnU9opEncN2-5-lDDPxCa3R9sGspNKXw/viewform?usp=publish-editor";
 
 export const subscriptionIntro =
   "Never run out of content again. We show up, shoot, and deliver. Every month.";
@@ -106,7 +106,6 @@ export const subscriptionNotes = [
   "Commit to 4 months for 10% off · Commit to 6 months for 20% off",
 ];
 
-const subscriptionBookingLink = "https://forms.gle/G7LcuPKJcXAmYr4i7";
 
 export const subscriptionPackages: Package[] = [
   {
@@ -119,7 +118,7 @@ export const subscriptionPackages: Package[] = [
       "Private link to all captured content",
       "Yours to use freely",
     ],
-    bookingLink: subscriptionBookingLink,
+    bookingLink: enquireHref("general", undefined, "I'm interested in the Self-Edit subscription"),
   },
   {
     name: "Growth",
@@ -131,7 +130,7 @@ export const subscriptionPackages: Package[] = [
       "8x edited content pieces per month",
       "Private link to all captured content",
     ],
-    bookingLink: subscriptionBookingLink,
+    bookingLink: enquireHref("general", undefined, "I'm interested in the Growth subscription"),
   },
   {
     name: "Pro",
@@ -145,7 +144,7 @@ export const subscriptionPackages: Package[] = [
       "Private link to all captured content",
     ],
     featured: true,
-    bookingLink: subscriptionBookingLink,
+    bookingLink: enquireHref("general", undefined, "I'm interested in the Pro subscription"),
   },
   {
     name: "Agency",
@@ -160,7 +159,7 @@ export const subscriptionPackages: Package[] = [
       "Priority turnaround",
       "Private link to all captured content",
     ],
-    bookingLink: subscriptionBookingLink,
+    bookingLink: enquireHref("general", undefined, "I'm interested in the Agency subscription"),
   },
 ];
 
@@ -205,7 +204,7 @@ export const corporateAddons: RateItem[] = [
   { id: "urgent", label: "Urgent turnaround", price: "+25% of total", value: 0, note: "Content delivered within 72 hours of your event." },
 ];
 
-export const corporateBookingLink = "https://forms.gle/EEzthxACjLroNHxu9";
+export const corporateBookingLink = "/enquire?type=corporate";
 
 // ─── Business Packages ──────────────────────────────────────────────────────
 
@@ -220,7 +219,7 @@ export const businessPackages: Package[] = [
       "1 hr on location shoot",
       "Full content library delivered for ongoing use",
     ],
-    bookingLink: businessBookingLink,
+    bookingLink: enquireHref("business", "Package One"),
   },
   {
     name: "Package Two",
@@ -234,7 +233,7 @@ export const businessPackages: Package[] = [
       "Full content library delivered for ongoing use",
     ],
     featured: true,
-    bookingLink: businessBookingLink,
+    bookingLink: enquireHref("business", "Package Two"),
   },
   {
     name: "Package Three",
@@ -248,6 +247,6 @@ export const businessPackages: Package[] = [
       "25 high res images",
       "Full content library delivered for ongoing use",
     ],
-    bookingLink: businessBookingLink,
+    bookingLink: enquireHref("business", "Package Three"),
   },
 ];

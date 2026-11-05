@@ -137,8 +137,6 @@ export default function PricingPage({
 
               <a
                 href={pkg.bookingLink ?? brand.bookingLink}
-                target="_blank"
-                rel="noopener noreferrer"
                 className={`mt-7 inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-medium transition-colors ${
                   pkg.featured
                     ? "bg-brand text-cream hover:bg-brand-deep"
@@ -170,8 +168,6 @@ export default function PricingPage({
           <div className="mt-6 flex flex-wrap items-center justify-center gap-4">
             <a
               href={brand.bookingLink}
-              target="_blank"
-              rel="noopener noreferrer"
               className="inline-flex items-center justify-center rounded-full bg-cream px-7 py-3 text-sm font-medium text-brand transition-colors hover:bg-sand"
             >
               Enquiry Form

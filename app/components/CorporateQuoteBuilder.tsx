@@ -356,7 +356,7 @@ export default function CorporateQuoteBuilder() {
 
           <p className="text-[0.7rem] text-cream/35">
             Clicking &quot;Send Enquiry&quot; will open your default email client with your quote pre-filled and ready to send. If it&apos;s not working, use{" "}
-            <a href={corporateBookingLink} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-cream/60 transition-colors">this enquiry form</a>
+            <a href={corporateBookingLink} className="underline underline-offset-2 hover:text-cream/60 transition-colors">this enquiry form</a>
             {" "}instead.
           </p>
 
