@@ -110,7 +110,7 @@ export const subscriptionNotes = [
 export const subscriptionPackages: Package[] = [
   {
     name: "Self-Edit",
-    price: "$900",
+    price: "$650",
     cadence: "/ month + GST",
     description: "High-quality content to use and curate yourself.",
     features: [
@@ -122,7 +122,7 @@ export const subscriptionPackages: Package[] = [
   },
   {
     name: "Growth",
-    price: "$1,900",
+    price: "$1,650",
     cadence: "/ month + GST",
     description: "For businesses ready to grow their social media presence.",
     features: [
